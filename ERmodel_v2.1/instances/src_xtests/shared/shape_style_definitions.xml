@@ -1,4 +1,4 @@
-   <all xmlns="http://www.entitymodelling.org/diagram">
+   <all xxmlns="http://www.entitymodelling.org/diagram">
 
       <shape_style>
          <id>margin</id>
