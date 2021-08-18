@@ -1,3 +1,7 @@
 ERmodel_v2.1/xslt/
 ERmodel_v2.1/instances/xslt/
 diagramModelasERv1.2/bin/
+**/docs/**
+**/old/**
+**/temp/**
+**/safe/**
