@@ -1,4 +1,4 @@
-   <all xxmlns="http://www.entitymodelling.org/diagram">
+   <all xmlns="http://www.entitymodelling.org/diagram">
 
    <text_style>
        <id>title</id>
