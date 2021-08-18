@@ -1,4 +1,4 @@
-<diagram xmlns="" xmlns:diagram="http://www.entitymodelling.org/diagram" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<diagram mlns="http://www.entitymodelling.org/diagram" xmlns:diagram="http://www.entitymodelling.org/diagram" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<include>
 		<filename>../src_xtests/shared/text_style_definitions.xml</filename>
 	</include>
