@@ -58,8 +58,9 @@ CHANGE HISTORY
 				</default>
 				<xsl:apply-templates select="absolute|entity_type|group" mode="passzero"/>
 				<xsl:apply-templates select="//composition" mode="passzero"/>
-			</diagram:diagram>
+			</diagram:diagram>	
 		</xsl:variable>
+
 
 		<xsl:variable name="state">
 			<xsl:for-each select="$state/*">
@@ -104,6 +105,7 @@ CHANGE HISTORY
 			<shape_style>entity_type_outline</shape_style>
 			<label/>
 			<xsl:apply-templates select="entity_type|group" mode="passzero"/>
+			<xsl:copy-of select="diagram:enclosure/*"/>
 		</enclosure>
 	</xsl:template>
 
