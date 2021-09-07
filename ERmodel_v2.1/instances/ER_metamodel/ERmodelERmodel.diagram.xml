@@ -19,7 +19,7 @@
       <hmin>1.0</hmin>
       <wmin>1.0</wmin>
       <margin>0.2</margin>
-      <padding>0.5</padding>
+      <padding>0.15</padding>
       <packing>horizontal</packing>
       <text_style>normal</text_style>
       <shape_style>outline</shape_style>
@@ -124,6 +124,16 @@
             </at>
          </y>
       </enclosure>
+      <x xmlns:era="http://www.entitymodelling.org/ERmodel">
+	        <place>
+		          <left/>
+		       </place>
+            <at>
+              <right/>
+              <predecessor/>
+            </at>
+		       <delta>6</delta>
+          </x>
       <y>
          <place>
             <top/>

@@ -141,6 +141,18 @@ DESCRIPTION
    </entity_type>
    <entity_type>
       <name>ENTITY_TYPE</name>
+	  <enclosure xmlns="http://www.entitymodelling.org/diagram">
+	     <x>
+	        <place>
+		     <left/>
+		    </place>
+            <at>
+              <right/>
+              <predecessor/>
+            </at>
+		    <delta>6</delta>
+          </x>
+	  </enclosure>
       <entity_type>
          <name>absolute</name>
          <presentation>
