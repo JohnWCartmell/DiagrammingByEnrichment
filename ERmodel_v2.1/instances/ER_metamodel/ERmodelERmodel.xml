@@ -155,17 +155,10 @@ DESCRIPTION
 	  </enclosure>
       <entity_type>
          <name>absolute</name>
-         <presentation>
-            <rightOf>entity_type_like</rightOf>
-         </presentation>
       </entity_type>
       <entity_type>
          <name>entity_type_like</name>
          <dependency_group>
-            <presentation>
-               <y>0.1</y>
-               <w>3.0</w>
-            </presentation>
          </dependency_group>
          <entity_type>
             <name>entity_type</name>
@@ -528,6 +521,18 @@ DESCRIPTION
    </entity_type>
    <entity_type>
       <name>presentation</name>
+	    <enclosure xmlns="http://www.entitymodelling.org/diagram">
+	     <x>
+	        <place>
+		     <left/>
+		    </place>
+            <at>
+              <right/>
+              <predecessor/>
+            </at>
+		    <delta>10</delta>
+          </x>
+	  </enclosure>
       <dependency_group>
          <presentation>
             <x>4.1</x>
@@ -1020,6 +1025,28 @@ DESCRIPTION
    </group>
    <group>
       <name>attribute_children</name>
+	  <enclosure xmlns="http://www.entitymodelling.org/diagram">
+	        <y>
+         <place>
+            <top/>
+         </place>
+         <at>
+            <bottom/>
+            <of>attribute</of>
+         </at>
+		 <delta>10.5</delta>
+      </y>
+      <x>
+         <place>
+            <left/>
+         </place>
+         <at>
+            <left/>
+            <of>attribute</of>
+         </at>
+		 <delta>-10.5</delta>
+      </x>
+	  </enclosure>
       <entity_type>
          <name>implementationOf</name>
          <dependency>
@@ -1246,6 +1273,15 @@ DESCRIPTION
    </entity_type>
    <group>
       <name>label_children</name>
+	   <enclosure xmlns="http://www.entitymodelling.org/diagram">
+	  	  <x>
+               <at>
+                  <left/>
+                  <predecessor/>
+               </at>
+			   <delta>5</delta>
+     </x>
+	 </enclosure>
       <presentation>
          <below>label</below>
       </presentation>

@@ -242,6 +242,16 @@
       <id>presentation</id>
       <shape_style>entity_type_outline</shape_style>
       <label/>
+      <x xmlns:era="http://www.entitymodelling.org/ERmodel">
+	        <place>
+		          <left/>
+		       </place>
+            <at>
+              <right/>
+              <predecessor/>
+            </at>
+		       <delta>10</delta>
+          </x>
       <y>
          <place>
             <top/>
@@ -857,7 +867,7 @@
             </at>
          </y>
       </enclosure>
-      <y>
+      <y xmlns:era="http://www.entitymodelling.org/ERmodel">
          <place>
             <top/>
          </place>
@@ -865,8 +875,9 @@
             <bottom/>
             <of>attribute</of>
          </at>
+		       <delta>10.5</delta>
       </y>
-      <x>
+      <x xmlns:era="http://www.entitymodelling.org/ERmodel">
          <place>
             <left/>
          </place>
@@ -874,6 +885,7 @@
             <left/>
             <of>attribute</of>
          </at>
+		       <delta>-10.5</delta>
       </x>
    </enclosure>
    <enclosure>
@@ -1094,6 +1106,13 @@
             </at>
          </y>
       </enclosure>
+      <x xmlns:era="http://www.entitymodelling.org/ERmodel">
+               <at>
+                  <left/>
+                  <predecessor/>
+               </at>
+			      <delta>5</delta>
+     </x>
       <y>
          <place>
             <top/>

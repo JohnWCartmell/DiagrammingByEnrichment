@@ -24,7 +24,9 @@
 		</xsl:copy>
 	</xsl:template>
 
-	<xsl:template match="enclosure[key('IncomingTopdownRoute',id)]" mode="passtwo">
+	<xsl:template match="enclosure[key('IncomingTopdownRoute',id)]
+	                     [not(y)]" 
+						 mode="passtwo">
 		<xsl:copy>
 			<xsl:apply-templates mode="passtwo"/>
 			<y> 
@@ -42,6 +44,7 @@
 	</xsl:template>
 	
 	<xsl:template match="enclosure
+	                     [not(x)]
 	                     [not(key('IncomingTopdownRoute',id))]
 						 [not(key('TerminatingIncomingTopdownRoute',id))]
 	                     [preceding-sibling::enclosure]
@@ -87,6 +90,7 @@
 	</xsl:template>
 	
 	<xsl:template match="enclosure
+	                     [not(x)]
 	                     [key('IncomingTopdownRoute',id)]
 						 [not(preceding::enclosure
 						         [(key('IncomingTopdownRoute',id)[1]/source/abstract)

@@ -115,6 +115,7 @@ CHANGE HISTORY
 			<shape_style>group_outline</shape_style>
 			<label/>
 			<xsl:apply-templates select="entity_type|group" mode="passzero"/>
+			<xsl:copy-of select="diagram:enclosure/*"/>
 		</enclosure>
 	</xsl:template>
 
