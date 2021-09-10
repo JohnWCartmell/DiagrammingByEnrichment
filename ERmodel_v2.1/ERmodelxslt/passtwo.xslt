@@ -14,8 +14,13 @@
 
 	<xsl:output method="xml" indent="yes" />
 	
-	<xsl:key name="IncomingTopdownRoute" match="route[top_down]" use="destination/abstract"/>
+	<!-- enclosure => set of route ... routes down to or into an outermost enclosure -->
+	<xsl:key name="IncomingTopdownRoute"  match="route[top_down]" use="destination/abstract"/> 
+
+	<!-- enclosure => set of route ... routes down from or from within  an outermost enclosure -->
 	<xsl:key name="OutgoingTopdownRoute" match="route[top_down]" use="source/abstract"/>
+	
+	<!-- enclosure => set of route  .. routes down to the enclosure --> 
 	<xsl:key name="TerminatingIncomingTopdownRoute" match="route[top_down]" use="destination/id"/>
 
 	<xsl:template match="*" mode="passtwo">
@@ -39,6 +44,7 @@
 						<xsl:value-of select="key('IncomingTopdownRoute',id)[1]/source/abstract"/>
 					</of>
 				</at>
+				<delta>1</delta>   <!-- make room for incoming top down route -->
 			</y>
 		</xsl:copy>
 	</xsl:template>
@@ -101,7 +107,7 @@
 					      ]
 						   " 
 						 mode="passfour">
-						 
+	<!-- the first top down route destination outer aligns at the left. What about subsequent? --> 				 
 		<xsl:copy>
 			<xsl:apply-templates mode="passfour"/>
 			<x> 

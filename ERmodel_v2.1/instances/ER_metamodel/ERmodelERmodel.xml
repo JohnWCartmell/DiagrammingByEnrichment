@@ -530,7 +530,7 @@ DESCRIPTION
               <right/>
               <predecessor/>
             </at>
-		    <delta>10</delta>
+		    <delta>16</delta>
           </x>
 	  </enclosure>
       <dependency_group>
@@ -1282,9 +1282,6 @@ DESCRIPTION
 			   <delta>5</delta>
      </x>
 	 </enclosure>
-      <presentation>
-         <below>label</below>
-      </presentation>
       <entity_type>
          <name>render</name>
          <dependency_group>

@@ -43,6 +43,7 @@
             <bottom/>
             <of>entity_model</of>
          </at>
+         <delta>1</delta>
       </y>
       <x>
          <place>
@@ -66,6 +67,7 @@
             <bottom/>
             <of>entity_model</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -80,6 +82,7 @@
             <bottom/>
             <of>entity_model</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -142,6 +145,7 @@
             <bottom/>
             <of>entity_model</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -156,6 +160,7 @@
             <bottom/>
             <of>ENTITY_TYPE</of>
          </at>
+         <delta>1</delta>
       </y>
       <x>
          <place>
@@ -179,6 +184,7 @@
             <bottom/>
             <of>ENTITY_TYPE</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -236,6 +242,7 @@
             <bottom/>
             <of>ENTITY_TYPE</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -250,7 +257,7 @@
               <right/>
               <predecessor/>
             </at>
-		       <delta>10</delta>
+		       <delta>16</delta>
           </x>
       <y>
          <place>
@@ -260,6 +267,7 @@
             <bottom/>
             <of>ENTITY_TYPE</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -274,6 +282,7 @@
             <bottom/>
             <of>Relationship</of>
          </at>
+         <delta>1</delta>
       </y>
       <x>
          <place>
@@ -297,6 +306,7 @@
             <bottom/>
             <of>Relationship</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -337,6 +347,7 @@
                <bottom/>
                <of>identifying(1)</of>
             </at>
+            <delta>1</delta>
          </y>
          <x>
             <place>
@@ -405,6 +416,7 @@
             <bottom/>
             <of>Relationship</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -457,6 +469,7 @@
             <bottom/>
             <of>Relationship</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -496,6 +509,7 @@
                <bottom/>
                <of>complex</of>
             </at>
+            <delta>1</delta>
          </y>
          <x>
             <place>
@@ -542,6 +556,7 @@
             <bottom/>
             <of>Relationship</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -704,6 +719,7 @@
             <bottom/>
             <of>presentation</of>
          </at>
+         <delta>1</delta>
       </y>
       <x>
          <place>
@@ -965,6 +981,7 @@
             <bottom/>
             <of>path</of>
          </at>
+         <delta>1</delta>
       </y>
       <x>
          <place>
@@ -1004,6 +1021,7 @@
             <bottom/>
             <of>path_children</of>
          </at>
+         <delta>1</delta>
       </y>
       <x>
          <place>
@@ -1121,6 +1139,7 @@
             <bottom/>
             <of>presentation</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
@@ -1162,6 +1181,7 @@
             <bottom/>
             <of>xml</of>
          </at>
+         <delta>1</delta>
       </y>
       <x>
          <place>
@@ -1201,6 +1221,7 @@
             <bottom/>
             <of>ENTITY_TYPE</of>
          </at>
+         <delta>1</delta>
       </y>
    </enclosure>
    <route>
