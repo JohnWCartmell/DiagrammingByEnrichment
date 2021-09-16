@@ -534,10 +534,6 @@ DESCRIPTION
           </x>
 	  </enclosure>
       <dependency_group>
-         <presentation>
-            <x>4.1</x>
-            <w>2.5</w>
-         </presentation>
       </dependency_group>
       <attribute>
          <name>x</name>
@@ -1247,6 +1243,18 @@ DESCRIPTION
             <type>dimension</type>
          </composition>
       </entity_type>
+	  <enclosure xmlns="http://www.entitymodelling.org/diagram">
+	 	 <y>
+         <place>
+            <top/>
+         </place>
+         <at>
+            <bottom/>
+            <of>path</of>
+         </at>
+		 <delta>6</delta>
+      </y>
+	 </enclosure>
    </group>
    <entity_type>
       <name>dimension</name>
