@@ -23,7 +23,7 @@
       <packing>horizontal</packing>
       <text_style>normal</text_style>
       <shape_style>outline</shape_style>
-      <debug-whitespace>true</debug-whitespace>
+      <debug-whitespace>false</debug-whitespace>
       <end_style>testline</end_style>
    </default>
    <enclosure>
@@ -973,7 +973,7 @@
             </at>
          </y>
       </enclosure>
-      <y>
+      <y xmlns:era="http://www.entitymodelling.org/ERmodel">
          <place>
             <top/>
          </place>
@@ -981,7 +981,7 @@
             <bottom/>
             <of>path</of>
          </at>
-         <delta>1</delta>
+		       <delta>6</delta>
       </y>
       <x>
          <place>
