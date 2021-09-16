@@ -103,6 +103,8 @@ CHANGE HISTORY
 		<enclosure>
 			<id><xsl:value-of select="name"/></id>
 			<shape_style>entity_type_outline</shape_style>
+			<rx>0.25</rx>
+			<ry>0.25</ry>
 			<label/>
 			<xsl:apply-templates select="entity_type|group" mode="passzero"/>
 			<xsl:copy-of select="diagram:enclosure/*"/>
