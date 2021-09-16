@@ -53,7 +53,7 @@ CHANGE HISTORY
 					<packing>horizontal</packing>
 					<text_style>normal</text_style>
 					<shape_style>outline</shape_style>
-					<debug-whitespace>true</debug-whitespace>
+					<debug-whitespace>false</debug-whitespace>
 					<end_style>testline</end_style>
 				</default>
 				<xsl:apply-templates select="absolute|entity_type|group" mode="passzero"/>
