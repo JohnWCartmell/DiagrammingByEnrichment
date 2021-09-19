@@ -53,6 +53,8 @@
 <xsl:include href="diagram...edge-+id.xslt"/>  -->           <!-- priority  40  -->
 <xsl:include href="diagram.route.path.xslt"/>             <!-- priority  40  -->
 <xsl:include href="diagram...route.node-+specific_edge.xslt"/>   <!-- priority  42  -->
+<xsl:include href="diagram...route.source-+stepNo.xslt"/>            <!--priority 40 -->
+<xsl:include href="diagram...route.source-+angleToOtherEnd.xslt"/>   <!--priority 40 -->
 <xsl:include href="diagram...path-+point.xslt"/>          <!-- priority  54, 55 ,57 -->
 <xsl:include href="diagram...path.point-+x.xslt"/>        <!-- priority  55, 56  -->
 <xsl:include href="diagram...path.point-+y.xslt"/>        <!-- priority  55, 56  -->

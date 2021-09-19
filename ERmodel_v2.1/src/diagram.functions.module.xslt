@@ -4,6 +4,7 @@
                xmlns="http://www.entitymodelling.org/diagram"
                xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+               xmlns:math="http://www.w3.org/2005/xpath-functions/math"
                xmlns:diagram="http://www.entitymodelling.org/diagram" 
                xpath-default-namespace="http://www.entitymodelling.org/diagram">
 
@@ -54,6 +55,15 @@
     <xsl:param name="sizefactorwrt11point"/>
     <xsl:value-of select=" $sizefactorwrt11point * 0.3"/>
   </xsl:function>
+
+<!-- cotan function given argument in degrees -->
+<xsl:function name="diagram:angleToYaxis">
+    <xsl:param name="xdiff" as="xs:double"/>
+    <xsl:param name="ydiff" as="xs:double"/>
+    <xsl:value-of select="math:atan($xdiff div $ydiff )"/>
+    <!-- math:pi() + -->
+</xsl:function>
+
 
 
 </xsl:transform>
