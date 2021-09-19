@@ -1406,7 +1406,17 @@
 			<type>
 				<float/>
 			</type>
-			<description>Relative position of other end in the axis of allocation when destinations having perverse position in the other axis are reflected.
+			<description>Relative position of other end in the axis of allocation when destinations having perverse position in the other axis are reflected.  NOT USED -- Replaced by 'angleToOtherEnd'.
+			</description>
+			<optional/>
+		</attribute>		
+		<attribute>
+			<name>angleToOtherEnd</name>
+			<type>
+				<float/>
+			</type>
+			<description>Angle to the other end wrt the edge from which this end is attached. Used to order 
+			  the endpoints attached to an edge as described by slotNo. Negative angle is anticlockwise.
 			</description>
 			<optional/>
 		</attribute>
