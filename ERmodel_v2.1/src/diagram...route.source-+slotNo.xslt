@@ -16,30 +16,31 @@
 <xsl:key name="SourcedAtBottomEdgeOf" match="source[bottom_edge]" use="id"/>
 
 <!-- ************************ -->
-<!-- source: +stepNo          -->
+<!-- source: +slotNo          -->
 <!-- ************************ -->
 
    <xsl:template match="source
-                        [not(stepNo)]
+                        [not(slotNo)]
+						[angleToOtherEnd]
+						[every $s in preceding::source
+                               satisfies $s/angleToOtherEnd
+                        ]
                     " 
               mode="recursive_diagram_enrichment"
               priority="40">
        <xsl:copy>
           <xsl:apply-templates mode="recursive_diagram_enrichment"/>
 		  
-	      <stepNo> 
+	      <slotNo> 
 		       <!-- sequentially numbering of the sources leaving the bottom edge
-			        of an enclosure. Currently ordered by position of the source 
-					within the document but in future by the relative x positions
-					of the corresponding destination enclosures.
+			        of an enclosure. 
 			    -->
-		       <xsl:value-of select="count(key('SourcedAtBottomEdgeOf',id)
-		                                             [ count(preceding::source)
-													     &lt;
-													   count(current()/preceding::source)
-												     ]
-		                                   )"/>
-		  </stepNo>
+		       <xsl:value-of select="count(
+											//source[bottom_edge]
+											        [id = current()/id]
+													[angleToOtherEnd &lt; current()/angleToOtherEnd ]
+										  )"/>
+		  </slotNo>
        </xsl:copy>
   </xsl:template>
   

@@ -851,9 +851,11 @@ CHANGE HISTORY
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
   
       <xsl:if test="place">
+	  <!--
           <xsl:message>
              Not yet implemented - support for place in this context - see file diagram.addressing.smarts.xslt
           </xsl:message>
+	   -->
       </xsl:if>
       <clocal>
           <xsl:value-of select="-(../wP div 2)"/>  <!-- this the rightP hand end wrPt centreP of parent. -->

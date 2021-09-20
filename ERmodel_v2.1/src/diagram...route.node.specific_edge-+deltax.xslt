@@ -17,42 +17,36 @@
 
 
 <!-- ************************************* -->
-<!-- route[top_down]/source  +bottom_edge  -->
+<!-- route/source/bottom_edge  +deltax  -->
 <!-- ************************************* -->
-
-<xsl:template match="route[top_down]
-                     /source
-					 [not(bottom_edge)]
+<!--
+<xsl:template match="route
+                     /source[slotNo]/bottom_edge
+					 [not(deltax)]
                     " 
               mode="recursive_diagram_enrichment"
               priority="42">
    <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
-      <bottom_edge>
-		  <annotate_left/>
-      </bottom_edge>
+      <deltax>
+		  <xsl:value-of select="../slotNo * 0.1"/>
+      </deltax>
    </xsl:copy>
 </xsl:template>
-
-<!-- ************************************* -->
-<!-- route[top_down]/source  +bottom_edge  -->
-<!-- ************************************* -->
-
-<xsl:template match="route[top_down]
-                     /destination
-					 [not(top_edge)]
+-->
+<xsl:template match="route
+                     /source/bottom_edge    
+					 [not(deltax)]
                     " 
               mode="recursive_diagram_enrichment"
               priority="42">
    <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
-      <top_edge>
-	      <deltax>0.75</deltax>
-		  <annotate_right/>
-      </top_edge>
+      <deltax>
+		  <xsl:value-of select="0.1"/>
+      </deltax>
    </xsl:copy>
 </xsl:template>
-
 
 </xsl:transform>
 

@@ -529,7 +529,6 @@ CHANGE HISTORY
 
 <xsl:template name="text_element" match="label">
   <svg:text>
-  <xsl:message>text element : <xsl:value-of select="text" /> </xsl:message>
      <xsl:attribute name="class" select="text_style"/>
      <xsl:choose>
         <xsl:when test="false()">
