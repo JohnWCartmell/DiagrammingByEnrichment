@@ -53,47 +53,39 @@
 		</enclosure>
 		<route>
 			<source>
-				<node>
 					<right_side>
 						<deltay>0.5</deltay>
 						<annotate_low/>
 					</right_side>
 					<id>A</id>
 					<annotation>link_to_b</annotation>
-				</node>
 			</source>
 			<destination>
-				<node>
 					<left_side>
 						<deltay>0.3</deltay>
 						<annotate_high/>
 					</left_side>
 					<id>B</id>
 					<annotation>back_to_a</annotation>
-				</node>
 			</destination>
 			<path><ns/></path>
 		</route>	
 		<route>
 			<source>
-				<node>
 					<bottom_edge>
 						<deltax>0.25</deltax>
 						<annotate_left/>
 					</bottom_edge>
 					<id>A</id>
 					<annotation>down_to_c</annotation>
-				</node>
 			</source>
 			<destination>
-				<node>
 					<top_edge>
 						<deltax>0.65</deltax>
 						<annotate_right/>
 					</top_edge>
 					<id>C</id>
 					<annotation>back_to_a</annotation>
-				</node>
 			</destination>
 			<path><ew/><ns/></path>  
 		</route>

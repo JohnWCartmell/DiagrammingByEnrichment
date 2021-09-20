@@ -49,24 +49,20 @@
 		</enclosure>
 		<route>
 			<source>
-				<node>
 					<right_side>
 						<deltay>0.25</deltay>
 						<annotate_high/>
 					</right_side>
 					<id>A</id>
 					<annotation>link_to_b</annotation>
-				</node>
 			</source>
 			<destination>
-				<node>
 					<right_side>
 						<deltay>0.75</deltay>
 						<annotate_low/>
 					</right_side>
 					<id>B</id>
 					<annotation>back_to_a</annotation>
-				</node>
 			</destination>
 			<path><ew/><ns/></path>
 		</route>	
