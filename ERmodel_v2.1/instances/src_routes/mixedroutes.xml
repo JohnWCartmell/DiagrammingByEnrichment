@@ -128,7 +128,7 @@
 		<route>
 			<source>
 					<bottom_edge>
-						<deltax>3.0</deltax>
+						<!--<deltax>3.0</deltax>-->
 						<annotate_left/>
 					</bottom_edge>
 					<id>A</id>
@@ -146,7 +146,7 @@
 		<route>
 			<source>
 					<bottom_edge>
-						<deltax>5.0</deltax>
+						<!--<deltax>5.0</deltax>-->
 						<annotate_right/>
 					</bottom_edge>
 					<id>A</id>

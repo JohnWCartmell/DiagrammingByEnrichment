@@ -19,7 +19,7 @@
   <xsl:template match="enclosure
                         [not(wrP)]
 						[wP]
-						[every $edge in key('is_endpoint_of',id)[annotation]
+						[every $edge in key('right_sideP_is_endpoint_of',id)[annotation]
                                satisfies $edge/x_upper_boundP
                         ]
                     " 
@@ -28,7 +28,7 @@
     <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
       <wrP>
-	     <xsl:value-of select="max((key('is_endpoint_of',id)[annotation]/x_upper_boundP,
+	     <xsl:value-of select="max((key('right_sideP_is_endpoint_of',id)[annotation]/x_upper_boundP,
 		                            wP
 		                           )) - wP"/>
 	  </wrP>

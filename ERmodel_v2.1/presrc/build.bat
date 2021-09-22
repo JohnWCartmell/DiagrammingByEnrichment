@@ -44,3 +44,7 @@ powershell .\ysubstitute.ps1 diagram...path-+point.startpoint+ewP.xslt ../xslt/d
 
 powershell .\xsubstitute.ps1 diagram...path-+point.endpoint+ewP.xslt ../xslt/diagram...path-+point.endpoint+ew.xslt
 powershell .\ysubstitute.ps1 diagram...path-+point.endpoint+ewP.xslt ../xslt/diagram...path-+point.endpoint+ns.xslt
+
+powershell .\xsubstitute.ps1 diagram...path.point_startpoint_-+yP.xslt ../xslt/diagram...path.point_startpoint_-+y.xslt
+powershell .\ysubstitute.ps1 diagram...path.point_startpoint_-+yP.xslt ../xslt/diagram...path.point_startpoint_-+x.xslt
+

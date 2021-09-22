@@ -27,6 +27,8 @@
 <xsl:include href="diagram.addressing.xw.smarts.xslt"/> <!-- priority  179 - 183 -->
 <xsl:include href="diagram.addressing.yh.smarts.xslt"/> <!-- priority  169 - 173 -->
 
+<xsl:include href="diagram...route-+src_rise+dest_rise.xslt "/> <!-- priority  169 -->
+
 <xsl:include href="diagram.depth.xslt"/>                <!-- priority  80  -->
 <xsl:include href="diagram.margin.xslt"/>               <!-- priority  76  -->
 <xsl:include href="diagram.text_style.xslt"/>           <!-- priority  77  -->
@@ -61,6 +63,10 @@
 <xsl:include href="diagram...path.point-+y.xslt"/>        <!-- priority  55, 56  -->
 <xsl:include href="diagram...path-+point.startpoint+ew.xslt"/>  <!-- priority  40  -->
 <xsl:include href="diagram...path-+point.startpoint+ns.xslt"/>  <!-- priority  40  -->
+
+<xsl:include href="diagram...path.point_startpoint_-+x.xslt"/>  <!-- priority  40  -->
+<xsl:include href="diagram...path.point_startpoint_-+y.xslt"/>  <!-- priority  40  -->
+
 <xsl:include href="diagram...path-+point.endpoint+ew.xslt"/>    <!-- priority  41  -->
 <xsl:include href="diagram...path-+point.endpoint+ns.xslt"/>    <!-- priority  41  -->
 <xsl:include href="diagram...route.path.point.label-+text.xslt"/>    <!-- priority  40  -->

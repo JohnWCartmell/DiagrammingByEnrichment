@@ -35,7 +35,7 @@
 </xsl:template>
 -->
 <xsl:template match="route
-                     /source/bottom_edge    
+                     /source[slotNo]/bottom_edge    
 					 [not(deltax)]
                     " 
               mode="recursive_diagram_enrichment"
@@ -43,7 +43,7 @@
    <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
       <deltax>
-		  <xsl:value-of select="0.1"/>
+		  <xsl:value-of select="(../slotNo + 1) * 0.3"/>
       </deltax>
    </xsl:copy>
 </xsl:template>

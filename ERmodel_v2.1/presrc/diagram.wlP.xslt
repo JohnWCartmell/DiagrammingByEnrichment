@@ -16,10 +16,10 @@
 <!-- *************** -->
 <!-- enclosure + wl -->
 <!-- *************** -->
-
+<!-- used to use the key 'is_endpoint_of' but changed to break a circularity - see notes of 20/21 September 2021 -->
   <xsl:template match="enclosure
                         [not(wlP)]
-						[every $edge in key('is_endpoint_of',id)[annotation]
+						[every $edge in key('left_sideP_is_endpoint_of',id)[annotation]
                                satisfies $edge/x_lower_boundP
                         ]
                     " 
@@ -28,7 +28,7 @@
     <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
       <wlP>
-	     <xsl:value-of select="- min((key('is_endpoint_of',id)[annotation]/x_lower_boundP ,
+	     <xsl:value-of select="- min((key('left_sideP_is_endpoint_of',id)[annotation]/x_lower_boundP ,
 		                              0
 		                             ))"/>
 	  </wlP>
