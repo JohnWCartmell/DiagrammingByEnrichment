@@ -56,12 +56,19 @@
     <xsl:value-of select=" $sizefactorwrt11point * 0.3"/>
   </xsl:function>
 
-<!-- cotan function given argument in degrees -->
+<!-- angle to y axis -->
+<!-- see notes in day book 19 September 2021 -->
 <xsl:function name="diagram:angleToYaxis">
     <xsl:param name="xdiff" as="xs:double"/>
     <xsl:param name="ydiff" as="xs:double"/>
-    <xsl:value-of select="math:atan($xdiff div $ydiff )"/>
-    <!-- math:pi() + -->
+	<xsl:value-of select="
+	   if ($xdiff = 0 or $ydiff = 0) then 0
+	   else if ($xdiff gt 0 and $ydiff gt 0) then math:atan($xdiff div $ydiff)
+	   else if ($xdiff gt 0 and $ydiff lt 0) then math:pi() + math:atan(abs($ydiff div $xdiff))
+	   else if ($xdiff lt 0 and $ydiff lt 0) then - math:pi() - math:atan(abs($ydiff div $xdiff))
+	   else if ($xdiff lt 0 and $ydiff gt 0) then - math:atan(abs($xdiff div $ydiff))
+	   else 'OUT OF SPEC'
+	"/>
 </xsl:function>
 
 

@@ -38,7 +38,7 @@
 		       <xsl:value-of select="count(
 											//source[bottom_edge]
 											        [id = current()/id]
-													[angleToOtherEnd &lt; current()/angleToOtherEnd ]
+													[number(angleToOtherEnd) &lt; number(current()/angleToOtherEnd) ]
 										  )"/>
 		  </slotNo>
        </xsl:copy>
