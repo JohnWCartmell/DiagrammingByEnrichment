@@ -5,6 +5,11 @@ powershell .\ysubstitute.ps1  diagram.wP.xslt ../xslt/diagram.h.xslt
 powershell .\xsubstitute.ps1  diagram...box-+xP.xslt ../xslt/diagram...box-+x.xslt
 powershell .\ysubstitute.ps1  diagram...box-+xP.xslt ../xslt/diagram...box-+y.xslt
 
+powershell .\xsubstitute.ps1  diagram...box-+xP_outer_upper_offset.xslt ../xslt/diagram...box-+x_outer_upper_offset.xslt
+powershell .\ysubstitute.ps1  diagram...box-+xP_outer_upper_offset.xslt ../xslt/diagram...box-+y_outer_upper_offset.xslt
+powershell .\xsubstitute.ps1  diagram...box-+xP_outer_lower_offset.xslt ../xslt/diagram...box-+x_outer_lower_offset.xslt
+powershell .\ysubstitute.ps1  diagram...box-+xP_outer_lower_offset.xslt ../xslt/diagram...box-+y_outer_lower_offset.xslt
+
 powershell .\xsubstitute.ps1  diagram...node-+x_lower_boundP.xslt ../xslt/diagram...node-+x_lower_bound.xslt
 powershell .\ysubstitute.ps1  diagram...node-+x_lower_boundP.xslt ../xslt/diagram...node-+y_lower_bound.xslt
 
@@ -47,4 +52,7 @@ powershell .\ysubstitute.ps1 diagram...path-+point.endpoint+ewP.xslt ../xslt/dia
 
 powershell .\xsubstitute.ps1 diagram...path.point_startpoint_-+yP.xslt ../xslt/diagram...path.point_startpoint_-+y.xslt
 powershell .\ysubstitute.ps1 diagram...path.point_startpoint_-+yP.xslt ../xslt/diagram...path.point_startpoint_-+x.xslt
+
+powershell .\xsubstitute.ps1 diagram...path.point_endpoint_-+yP.xslt ../xslt/diagram...path.point_endpoint_-+y.xslt
+powershell .\ysubstitute.ps1 diagram...path.point_endpoint_-+yP.xslt ../xslt/diagram...path.point_endpoint_-+x.xslt
 

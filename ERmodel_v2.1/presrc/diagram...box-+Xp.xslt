@@ -7,8 +7,8 @@
                xmlns:diagram="http://www.entitymodelling.org/diagram" 
                xpath-default-namespace="http://www.entitymodelling.org/diagram">
 
-<!--  Maintenance Box 
-
+<!--  Maintenance Box ->
+23 September 2021 Modify so that first enclosed enclosures placed after any preceeding labels.
  -->
 
 <xsl:output method="xml" indent="yes"/>
@@ -16,9 +16,12 @@
 <!-- *********** -->
 <!-- enclosure  +xP -->
 <!-- *********** -->
+<!-- add [not(preceding-sibling::label)]   -->
+
 <xsl:template match="enclosure
                      [not(xP)]
                      [not(preceding-sibling::enclosure)]
+					 [not(preceding-sibling::label)]
                     " mode="recursive_diagram_enrichment"
               priority="50P">
    <xsl:copy>
@@ -29,9 +32,10 @@
    </xsl:copy>
 </xsl:template>
 
+<!-- change to [preceding-sibling::*[self::label|self::enclosure]] -->
 <xsl:template match="enclosure
                      [not(xP)]
-                     [preceding-sibling::enclosure]
+                     [preceding-sibling::*[self::label|self::enclosure]]
                     " mode="recursive_diagram_enrichment"
               priority="50P">
    <xsl:copy>
@@ -77,7 +81,10 @@
 </xsl:template>
 
 
-<!-- NON SYMETRIC RULES !!!!!!!  -->
+<!-- NON SYMETRIC RULES !!!!!!!  
+     Therefore sourced as <x> and <y> and *not* sourced as <xP>
+-->
+
 <!-- *********** -->
 <!-- label/x    -->
 <!-- *********** -->

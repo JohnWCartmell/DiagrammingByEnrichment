@@ -22,7 +22,7 @@
    <xsl:template match="source
                         [not(slotNo)]
 						[angleToOtherEnd]
-						[every $s in preceding::source
+						[every $s in //source[bottom_edge][id = current()/id]
                                satisfies $s/angleToOtherEnd
                         ]
                     " 
@@ -36,8 +36,35 @@
 			        of an enclosure. 
 			    -->
 		       <xsl:value-of select="count(
-											//source[bottom_edge]
-											        [id = current()/id]
+											//source[bottom_edge][id = current()/id]
+													[number(angleToOtherEnd) &lt; number(current()/angleToOtherEnd) ]
+										  )"/>
+		  </slotNo>
+       </xsl:copy>
+  </xsl:template>
+  
+ <!-- ************************ -->
+<!-- destination: +slotNo          -->
+<!-- ************************ -->
+
+   <xsl:template match="destination
+                        [not(slotNo)]
+						[angleToOtherEnd]
+						[every $s in //destination[top_edge][id = current()/id]
+                               satisfies $s/angleToOtherEnd
+                        ]
+                    " 
+              mode="recursive_diagram_enrichment"
+              priority="40">
+       <xsl:copy>
+          <xsl:apply-templates mode="recursive_diagram_enrichment"/>
+		  
+	      <slotNo> 
+		       <!-- sequentially numbering of the routes with destination arriving at top_edge 
+			        of an enclosure. 
+			    -->
+		       <xsl:value-of select="count(
+											//destination[top_edge][id = current()/id]
 													[number(angleToOtherEnd) &lt; number(current()/angleToOtherEnd) ]
 										  )"/>
 		  </slotNo>

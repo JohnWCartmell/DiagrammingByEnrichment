@@ -1,5 +1,4 @@
-   <all>
-
+ <all xmlns="http://www.entitymodelling.org/diagram">
       <shape_style>
          <id>margin</id>
          <stroke>black</stroke> 

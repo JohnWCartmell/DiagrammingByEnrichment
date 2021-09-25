@@ -56,7 +56,9 @@
     <xsl:value-of select=" $sizefactorwrt11point * 0.3"/>
   </xsl:function>
 
-<!-- angle to y axis -->
+<!-- angle to y axis      -->
+<!-- y-axis points down   -->
+<!-- angles in left hand plane to be considered negative and angles in right half likewise positive -->
 <!-- see notes in day book 19 September 2021 -->
 <xsl:function name="diagram:angleToYaxis">
     <xsl:param name="xdiff" as="xs:double"/>
@@ -71,7 +73,18 @@
 	"/>
 </xsl:function>
 
-
+<!-- angle to negative y-axis is angle to the upward pointring vertical -->
+<!-- angles in left hand plane to be considered negative and angles in right half likewise positive -->
+<!-- in left half plane angleToNegativey + angleToyaxis = -2pi -->
+<!-- in right half plane angleToNegativey + angleToyaxis = 2pi -->
+<xsl:function name="diagram:angleToNegativeYaxis">
+    <xsl:param name="xdiff" as="xs:double"/>
+    <xsl:param name="ydiff" as="xs:double"/>
+    <xsl:value-of select="
+	  if ($xdiff = 0 or $ydiff = 0) then 0
+	  else (if ($xdiff lt 0) then - 2 * math:pi() else 2 * math:pi()) - diagram:angleToYaxis($xdiff,$ydiff)
+	"/>
+</xsl:function>
 
 </xsl:transform>
 

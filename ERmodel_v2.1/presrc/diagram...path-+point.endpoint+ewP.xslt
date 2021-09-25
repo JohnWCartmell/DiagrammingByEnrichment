@@ -19,10 +19,9 @@
 	<!-- ******************************** -->
 
 
-	<!-- destination is left_side_P -->
+	<!-- destination is left_side_P --> <!-- used to include [destination/left_sideP/deltayP] -->
 	<xsl:template match="route
-                       [destination/left_sideP/deltayP]
-					   [destination/id]
+					   [destination[left_sideP]/id]
 					   /path
 					   [not(point/endpoint)]
 					   " 
@@ -39,21 +38,22 @@
 						<of><xsl:value-of select="../destination/id"/></of>
 					</at>
 				</xP>
+				<!--
 				<yP> 
 					<at>
 						<offset><xsl:value-of select="../destination/left_sideP/deltayP"/></offset>
 						<of><xsl:value-of select="../destination/id"/></of>					
 					</at>
 				</yP>
+				-->
 				<label/>
 			</point>
 		</xsl:copy>
 	</xsl:template>
 
-	<!-- destination is right_sideP -->
+	<!-- destination is right_sideP --> <!-- used to include [destination/right_sideP/deltayP] -->
 	<xsl:template match="route
-                       [destination/right_sideP/deltayP]
-					   [destination/id]
+					   [destination[right_sideP]/id]
 					   /path
 					   [not(point/endpoint)]
 					   " 
@@ -70,12 +70,14 @@
 						<of><xsl:value-of select="../destination/id"/></of>
 					</at>
 				</xP>
+				<!-- 
 				<yP> 
 					<at>
 						<offset><xsl:value-of select="../destination/right_sideP/deltayP"/></offset>
 						<of><xsl:value-of select="../destination/id"/></of>					
 					</at>
 				</yP>
+				-->
 				<label/>
 			</point>
 		</xsl:copy>

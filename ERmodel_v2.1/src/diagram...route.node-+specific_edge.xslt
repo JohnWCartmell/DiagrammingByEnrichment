@@ -47,7 +47,7 @@
    <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
       <top_edge>
-	      <deltax>0.75</deltax>
+	      <!--<deltax>0.75</deltax>-->
 		  <annotate_right/>
       </top_edge>
    </xsl:copy>

@@ -16,8 +16,8 @@
       <filename>shared/endline_style_definitions.xml</filename>
    </include>
    <default>
-      <hmin>1.0</hmin>
-      <wmin>1.0</wmin>
+      <hmin>0.5</hmin>
+      <wmin>0.05</wmin>
       <margin>0.2</margin>
       <padding>0.15</padding>
       <packing>horizontal</packing>
@@ -29,11 +29,16 @@
    <enclosure>
       <id>entity_model</id>
       <shape_style>entity_type_outline</shape_style>
+      <w>35</w>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
    </enclosure>
    <enclosure>
       <id>diagram</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <y>
          <place>
@@ -58,6 +63,8 @@
    <enclosure>
       <id>defaults</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <y>
          <place>
@@ -73,6 +80,8 @@
    <enclosure>
       <id>xml</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <y>
          <place>
@@ -88,30 +97,66 @@
    <enclosure>
       <id>ENTITY_TYPE</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <enclosure>
          <id>absolute</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
-         <y>
+         <x>
             <at>
-               <top/>
+               <left/>
                <parent/>
+            </at>
+         </x>
+         <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
+            <at>
+               <bottom/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
       <enclosure>
          <id>entity_type_like</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>entity_type</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>group</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -121,22 +166,16 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
-      <x xmlns:era="http://www.entitymodelling.org/ERmodel">
-	        <place>
-		          <left/>
-		       </place>
-            <at>
-              <right/>
-              <predecessor/>
-            </at>
-		       <delta>6</delta>
-          </x>
       <y>
          <place>
             <top/>
@@ -151,6 +190,8 @@
    <enclosure>
       <id>attribute</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <y>
          <place>
@@ -175,6 +216,25 @@
    <enclosure>
       <id>dependency_group</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
+      <label/>
+      <y>
+         <place>
+            <top/>
+         </place>
+         <at>
+            <bottom/>
+            <of>ENTITY_TYPE</of>
+         </at>
+         <delta>1</delta>
+      </y>
+   </enclosure>
+   <enclosure>
+      <id>presentation</id>
+      <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <y>
          <place>
@@ -190,19 +250,43 @@
    <enclosure>
       <id>Relationship</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <enclosure>
          <id>reference_or_dependency</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>dependency</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>reference</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -211,10 +295,28 @@
                </at>
             </x>
          </enclosure>
+         <x>
+            <at>
+               <left/>
+               <parent/>
+            </at>
+         </x>
+         <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
+            <at>
+               <bottom/>
+               <predecessor/>
+            </at>
+         </y>
       </enclosure>
       <enclosure>
          <id>constructed_relationship</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <x>
             <at>
@@ -226,6 +328,8 @@
       <enclosure>
          <id>composition</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <x>
             <at>
@@ -234,31 +338,6 @@
             </at>
          </x>
       </enclosure>
-      <y>
-         <place>
-            <top/>
-         </place>
-         <at>
-            <bottom/>
-            <of>ENTITY_TYPE</of>
-         </at>
-         <delta>1</delta>
-      </y>
-   </enclosure>
-   <enclosure>
-      <id>presentation</id>
-      <shape_style>entity_type_outline</shape_style>
-      <label/>
-      <x xmlns:era="http://www.entitymodelling.org/ERmodel">
-	        <place>
-		          <left/>
-		       </place>
-            <at>
-              <right/>
-              <predecessor/>
-            </at>
-		       <delta>16</delta>
-          </x>
       <y>
          <place>
             <top/>
@@ -273,6 +352,8 @@
    <enclosure>
       <id>path</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <y>
          <place>
@@ -297,6 +378,8 @@
    <enclosure>
       <id>sequence</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <y>
          <place>
@@ -312,12 +395,17 @@
    <enclosure>
       <id>righthand_children</id>
       <shape_style>group_outline</shape_style>
-      <label/>
       <enclosure>
          <id>projection</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
                <parent/>
@@ -327,17 +415,25 @@
       <enclosure>
          <id>identifying(1)</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
       <enclosure>
          <id>inherited</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <y>
             <place>
@@ -362,15 +458,37 @@
       <enclosure>
          <id>cardinality</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>ZeroOrOne</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>ExactlyOne</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -382,6 +500,8 @@
          <enclosure>
             <id>ZeroOneOrMore</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -393,6 +513,8 @@
          <enclosure>
             <id>OneOrMore</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -402,9 +524,13 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
@@ -422,12 +548,17 @@
    <enclosure>
       <id>composition_children</id>
       <shape_style>group_outline</shape_style>
-      <label/>
       <enclosure>
          <id>transient</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
                <parent/>
@@ -437,15 +568,37 @@
       <enclosure>
          <id>initialiser</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>pullback</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>copy</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -455,9 +608,13 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
@@ -475,19 +632,43 @@
    <enclosure>
       <id>navigation</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <enclosure>
          <id>complex</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>join</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>aggregate</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -496,10 +677,28 @@
                </at>
             </x>
          </enclosure>
+         <x>
+            <at>
+               <left/>
+               <parent/>
+            </at>
+         </x>
+         <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
+            <at>
+               <bottom/>
+               <predecessor/>
+            </at>
+         </y>
       </enclosure>
       <enclosure>
          <id>component</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <y>
             <place>
@@ -524,15 +723,18 @@
       <enclosure>
          <id>component children</id>
          <shape_style>group_outline</shape_style>
-         <label/>
          <enclosure>
             <id>identity</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
          </enclosure>
          <enclosure>
             <id>theabsolute</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -562,25 +764,40 @@
    <enclosure>
       <id>presentation_children</id>
       <shape_style>group_outline</shape_style>
-      <label/>
       <enclosure>
          <id>position</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>relative</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
-            <y>
+            <x>
                <at>
-                  <top/>
+                  <left/>
                   <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
                </at>
             </y>
          </enclosure>
          <enclosure>
             <id>abs</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -592,6 +809,8 @@
          <enclosure>
             <id>local</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -603,6 +822,8 @@
          <enclosure>
             <id>default</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -612,6 +833,10 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
                <parent/>
@@ -621,15 +846,37 @@
       <enclosure>
          <id>CustomShape</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>Top</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>TopLeft</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -641,6 +888,8 @@
          <enclosure>
             <id>TopRight</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -652,6 +901,8 @@
          <enclosure>
             <id>MiddleRight</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -663,6 +914,8 @@
          <enclosure>
             <id>MiddleLeft</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -674,6 +927,8 @@
          <enclosure>
             <id>BottomLeft</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -685,6 +940,8 @@
          <enclosure>
             <id>BottomRight</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -696,6 +953,8 @@
          <enclosure>
             <id>Bottom</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -705,9 +964,13 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
@@ -733,13 +996,67 @@
    </enclosure>
    <enclosure>
       <id>attribute_children</id>
-      <shape_style>group_outline</shape_style>
-      <label/>
+      <shape_style>codedfor_group_outline</shape_style>
       <enclosure>
-         <id>implementationOf</id>
+         <id>xmlStyle(2)</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
+         <enclosure>
+            <id>Attribute</id>
+            <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
+            <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
+         </enclosure>
+         <enclosure>
+            <id>Element(2)</id>
+            <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
+            <label/>
+            <x>
+               <at>
+                  <left/>
+                  <predecessor/>
+               </at>
+            </x>
+         </enclosure>
+         <enclosure>
+            <id>Anonymous(2)</id>
+            <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
+            <label/>
+            <x>
+               <at>
+                  <left/>
+                  <predecessor/>
+               </at>
+            </x>
+         </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
                <parent/>
@@ -747,17 +1064,56 @@
          </y>
       </enclosure>
       <enclosure>
+         <id>implementationOf</id>
+         <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
+         <label/>
+         <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
+            <at>
+               <top/>
+               <predecessor/>
+            </at>
+         </y>
+      </enclosure>
+      <enclosure>
          <id>value_type</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>boolean</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>date</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -769,6 +1125,8 @@
          <enclosure>
             <id>dateTime</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -780,6 +1138,8 @@
          <enclosure>
             <id>integer</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -791,6 +1151,8 @@
          <enclosure>
             <id>float</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -802,6 +1164,8 @@
          <enclosure>
             <id>nonNegativeInteger</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -813,6 +1177,8 @@
          <enclosure>
             <id>positiveInteger</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -824,6 +1190,8 @@
          <enclosure>
             <id>string</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -835,6 +1203,8 @@
          <enclosure>
             <id>time</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -844,42 +1214,64 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
       <enclosure>
          <id>identifying(2)</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
       <enclosure>
          <id>optional</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
       <enclosure>
          <id>deprecated</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
@@ -906,13 +1298,18 @@
    </enclosure>
    <enclosure>
       <id>path_children</id>
-      <shape_style>group_outline</shape_style>
-      <label/>
+      <shape_style>codedfor_group_outline</shape_style>
       <enclosure>
          <id>label</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
                <parent/>
@@ -922,15 +1319,37 @@
       <enclosure>
          <id>src_or_dest</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>ToSrc</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>ToDest</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -940,24 +1359,50 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
       <enclosure>
          <id>step</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>vstep</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>hstep</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -967,9 +1412,13 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
@@ -996,15 +1445,37 @@
    <enclosure>
       <id>dimension</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <enclosure>
          <id>reldim</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
+         <x>
+            <at>
+               <left/>
+               <parent/>
+            </at>
+         </x>
+         <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
+            <at>
+               <bottom/>
+               <predecessor/>
+            </at>
+         </y>
       </enclosure>
       <enclosure>
          <id>absdim</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <x>
             <at>
@@ -1035,20 +1506,41 @@
    </enclosure>
    <enclosure>
       <id>label_children</id>
-      <shape_style>group_outline</shape_style>
-      <label/>
+      <shape_style>codedfor_group_outline</shape_style>
       <enclosure>
          <id>render</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>None</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>Split</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -1060,6 +1552,8 @@
          <enclosure>
             <id>NoSplit</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -1069,6 +1563,10 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
                <parent/>
@@ -1078,15 +1576,37 @@
       <enclosure>
          <id>relative_position</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <enclosure>
             <id>Right</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
+            <x>
+               <at>
+                  <left/>
+                  <parent/>
+               </at>
+            </x>
+            <y>
+               <place>
+                  <top/>
+                  <edge/>
+               </place>
+               <at>
+                  <bottom/>
+                  <predecessor/>
+               </at>
+            </y>
          </enclosure>
          <enclosure>
             <id>Left</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -1098,6 +1618,8 @@
          <enclosure>
             <id>Upside</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -1109,6 +1631,8 @@
          <enclosure>
             <id>Downside</id>
             <shape_style>entity_type_outline</shape_style>
+            <rx>0.25</rx>
+            <ry>0.25</ry>
             <label/>
             <x>
                <at>
@@ -1118,9 +1642,13 @@
             </x>
          </enclosure>
          <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
             <at>
                <top/>
-               <parent/>
+               <predecessor/>
             </at>
          </y>
       </enclosure>
@@ -1143,68 +1671,39 @@
       </y>
    </enclosure>
    <enclosure>
-      <id>xmlStyle(2)</id>
-      <shape_style>entity_type_outline</shape_style>
-      <label/>
-      <enclosure>
-         <id>Attribute</id>
-         <shape_style>entity_type_outline</shape_style>
-         <label/>
-      </enclosure>
-      <enclosure>
-         <id>Element(2)</id>
-         <shape_style>entity_type_outline</shape_style>
-         <label/>
-         <x>
-            <at>
-               <left/>
-               <predecessor/>
-            </at>
-         </x>
-      </enclosure>
-      <enclosure>
-         <id>Anonymous(2)</id>
-         <shape_style>entity_type_outline</shape_style>
-         <label/>
-         <x>
-            <at>
-               <left/>
-               <predecessor/>
-            </at>
-         </x>
-      </enclosure>
-      <y>
-         <place>
-            <top/>
-         </place>
-         <at>
-            <bottom/>
-            <of>xml</of>
-         </at>
-         <delta>1</delta>
-      </y>
-      <x>
-         <place>
-            <left/>
-         </place>
-         <at>
-            <left/>
-            <of>xml</of>
-         </at>
-      </x>
-   </enclosure>
-   <enclosure>
       <id>xmlStyle(1)</id>
       <shape_style>entity_type_outline</shape_style>
+      <rx>0.25</rx>
+      <ry>0.25</ry>
       <label/>
       <enclosure>
          <id>Element(1)</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
+         <x>
+            <at>
+               <left/>
+               <parent/>
+            </at>
+         </x>
+         <y>
+            <place>
+               <top/>
+               <edge/>
+            </place>
+            <at>
+               <bottom/>
+               <predecessor/>
+            </at>
+         </y>
       </enclosure>
       <enclosure>
          <id>Anonymous(1)</id>
          <shape_style>entity_type_outline</shape_style>
+         <rx>0.25</rx>
+         <ry>0.25</ry>
          <label/>
          <x>
             <at>
@@ -1299,7 +1798,7 @@
       <destination>
          <id>xmlStyle(2)</id>
          <annotation/>
-         <abstract>xmlStyle(2)</abstract>
+         <abstract>attribute_children</abstract>
       </destination>
    </route>
    <route>
@@ -1455,7 +1954,7 @@
       <destination>
          <id>xmlStyle(2)</id>
          <annotation/>
-         <abstract>xmlStyle(2)</abstract>
+         <abstract>attribute_children</abstract>
       </destination>
    </route>
    <route>
@@ -1469,6 +1968,110 @@
          <id>presentation</id>
          <annotation/>
          <abstract>presentation</abstract>
+      </destination>
+   </route>
+   <route>
+      <top_down/>
+      <source>
+         <id>presentation</id>
+         <annotation>xl</annotation>
+         <abstract>presentation</abstract>
+      </source>
+      <destination>
+         <id>position</id>
+         <annotation/>
+         <abstract>presentation_children</abstract>
+      </destination>
+   </route>
+   <route>
+      <top_down/>
+      <source>
+         <id>presentation</id>
+         <annotation>xc</annotation>
+         <abstract>presentation</abstract>
+      </source>
+      <destination>
+         <id>relative</id>
+         <annotation/>
+         <abstract>presentation_children</abstract>
+      </destination>
+   </route>
+   <route>
+      <top_down/>
+      <source>
+         <id>presentation</id>
+         <annotation>xr</annotation>
+         <abstract>presentation</abstract>
+      </source>
+      <destination>
+         <id>relative</id>
+         <annotation/>
+         <abstract>presentation_children</abstract>
+      </destination>
+   </route>
+   <route>
+      <top_down/>
+      <source>
+         <id>presentation</id>
+         <annotation>yt</annotation>
+         <abstract>presentation</abstract>
+      </source>
+      <destination>
+         <id>position</id>
+         <annotation/>
+         <abstract>presentation_children</abstract>
+      </destination>
+   </route>
+   <route>
+      <top_down/>
+      <source>
+         <id>presentation</id>
+         <annotation>ym</annotation>
+         <abstract>presentation</abstract>
+      </source>
+      <destination>
+         <id>relative</id>
+         <annotation/>
+         <abstract>presentation_children</abstract>
+      </destination>
+   </route>
+   <route>
+      <top_down/>
+      <source>
+         <id>presentation</id>
+         <annotation>yb</annotation>
+         <abstract>presentation</abstract>
+      </source>
+      <destination>
+         <id>relative</id>
+         <annotation/>
+         <abstract>presentation_children</abstract>
+      </destination>
+   </route>
+   <route>
+      <top_down/>
+      <source>
+         <id>presentation</id>
+         <annotation>shape</annotation>
+         <abstract>presentation</abstract>
+      </source>
+      <destination>
+         <id>CustomShape</id>
+         <annotation/>
+         <abstract>presentation_children</abstract>
+      </destination>
+   </route>
+   <route>
+      <top_down/>
+      <source>
+         <id>presentation</id>
+         <annotation>name</annotation>
+         <abstract>presentation</abstract>
+      </source>
+      <destination>
+         <id>render</id>
+         <annotation/>
+         <abstract>label_children</abstract>
       </destination>
    </route>
    <route>
@@ -1612,110 +2215,6 @@
          <id>cardinality</id>
          <annotation/>
          <abstract>righthand_children</abstract>
-      </destination>
-   </route>
-   <route>
-      <top_down/>
-      <source>
-         <id>presentation</id>
-         <annotation>xl</annotation>
-         <abstract>presentation</abstract>
-      </source>
-      <destination>
-         <id>position</id>
-         <annotation/>
-         <abstract>presentation_children</abstract>
-      </destination>
-   </route>
-   <route>
-      <top_down/>
-      <source>
-         <id>presentation</id>
-         <annotation>xc</annotation>
-         <abstract>presentation</abstract>
-      </source>
-      <destination>
-         <id>relative</id>
-         <annotation/>
-         <abstract>presentation_children</abstract>
-      </destination>
-   </route>
-   <route>
-      <top_down/>
-      <source>
-         <id>presentation</id>
-         <annotation>xr</annotation>
-         <abstract>presentation</abstract>
-      </source>
-      <destination>
-         <id>relative</id>
-         <annotation/>
-         <abstract>presentation_children</abstract>
-      </destination>
-   </route>
-   <route>
-      <top_down/>
-      <source>
-         <id>presentation</id>
-         <annotation>yt</annotation>
-         <abstract>presentation</abstract>
-      </source>
-      <destination>
-         <id>position</id>
-         <annotation/>
-         <abstract>presentation_children</abstract>
-      </destination>
-   </route>
-   <route>
-      <top_down/>
-      <source>
-         <id>presentation</id>
-         <annotation>ym</annotation>
-         <abstract>presentation</abstract>
-      </source>
-      <destination>
-         <id>relative</id>
-         <annotation/>
-         <abstract>presentation_children</abstract>
-      </destination>
-   </route>
-   <route>
-      <top_down/>
-      <source>
-         <id>presentation</id>
-         <annotation>yb</annotation>
-         <abstract>presentation</abstract>
-      </source>
-      <destination>
-         <id>relative</id>
-         <annotation/>
-         <abstract>presentation_children</abstract>
-      </destination>
-   </route>
-   <route>
-      <top_down/>
-      <source>
-         <id>presentation</id>
-         <annotation>shape</annotation>
-         <abstract>presentation</abstract>
-      </source>
-      <destination>
-         <id>CustomShape</id>
-         <annotation/>
-         <abstract>presentation_children</abstract>
-      </destination>
-   </route>
-   <route>
-      <top_down/>
-      <source>
-         <id>presentation</id>
-         <annotation>name</annotation>
-         <abstract>presentation</abstract>
-      </source>
-      <destination>
-         <id>render</id>
-         <annotation/>
-         <abstract>label_children</abstract>
       </destination>
    </route>
    <route>

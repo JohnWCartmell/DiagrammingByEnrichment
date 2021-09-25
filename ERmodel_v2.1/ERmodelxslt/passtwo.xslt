@@ -28,7 +28,8 @@
 			<xsl:apply-templates mode="passtwo"/>
 		</xsl:copy>
 	</xsl:template>
-
+	
+	<!-- y position of an outermost  enclosure with a top down route in to it or one of its child enclosures puts it 1cm beneath the outermost enclosure of its source	-->
 	<xsl:template match="enclosure[key('IncomingTopdownRoute',id)]
 	                     [not(y)]" 
 						 mode="passtwo">
@@ -49,6 +50,11 @@
 		</xsl:copy>
 	</xsl:template>
 	
+	<!-- x position of an enclosure which is neither the outermost enclosure into which arrives a top down route 
+	                                         nor has a top down route arriving at it 
+											 and which has a preceeding enclosure
+					is placed underneath its predecessor and with its left edge aligned.
+    -->
 	<xsl:template match="enclosure
 	                     [not(x)]
 	                     [not(key('IncomingTopdownRoute',id))]
@@ -72,19 +78,122 @@
 		</xsl:copy>
 	</xsl:template>
 	
+	
+	<!-- next three templates - a non-outermost enclosure with a top down route to it is placed at the top of its parent enclosure. --> 
+	
+	<!-- if it is the first enclosure  within its parent enclosure and is preceeded by a label 
+	   it is placed beneath the predecessor label to the left of the containing enclosure-->	              
+
 	<xsl:template match="enclosure/enclosure
 						 [key('TerminatingIncomingTopdownRoute',id)]
+						 [preceding-sibling::label]
+						 [not(preceding-sibling::enclosure)]
 						 [not(y)]
-						 
 	                    " mode="passthree">
 		<xsl:copy>
 			<xsl:apply-templates mode="passthree"/>
+         <x> 
+		    <at><left/><parent/></at>
+		 </x>
+         <y>
+		    <place><top/><edge/></place>
+            <at>
+               <bottom/>
+               <predecessor/>
+            </at>
+         </y>
+		 <!--
 			<y> 
 				<at>
 					<top/>
 					<parent/>
 				</at>
 			</y>
+			-->
+		</xsl:copy>
+	</xsl:template>
+	
+    <!-- if it is the first enclosure  within its parent enclosure and but is not preceeded by a label 
+	          then it is placed at the top of its parent enclosure    -->
+	<xsl:template match="enclosure/enclosure
+						 [key('TerminatingIncomingTopdownRoute',id)]	
+						 [not(preceding-sibling::label)]
+						 [not(preceding-sibling::enclosure)]
+						 [not(y)]		 
+	                    " mode="passthree">
+		<xsl:copy>
+			<xsl:apply-templates mode="passthree"/>
+         <y>
+		    <place>
+			    <top/>
+				<edge/>
+		    </place>
+            <at>
+               <top/>
+               <parent/>
+            </at>
+         </y>
+		 <!--
+			<y> 
+				<at>
+					<top/>
+					<parent/>
+				</at>
+			</y>
+			-->
+		</xsl:copy>
+	</xsl:template>
+	
+	    <!-- if it is the not the first enclosure  within its parent enclosure  it is laid to the right of its predecessor -->	              
+	<xsl:template match="enclosure/enclosure
+						 [key('TerminatingIncomingTopdownRoute',id)]				 
+						 [preceding-sibling::enclosure]
+						 [not(y)]
+	                    " mode="passthree">
+		<xsl:copy>
+			<xsl:apply-templates mode="passthree"/>
+         <y>
+		    <place>
+			    <top/>
+				<edge/>
+		    </place>
+            <at>
+               <top/>
+               <predecessor/>
+            </at>
+         </y>
+		 <!--
+			<y> 
+				<at>
+					<top/>
+					<parent/>
+				</at>
+			</y>
+			-->
+		</xsl:copy>
+	</xsl:template>
+	
+	
+	<!-- first enclosure within a containing enclosure and preceded by a label -->
+	
+	<xsl:template match="enclosure/enclosure
+						 [not(key('TerminatingIncomingTopdownRoute',id))]
+						 [preceding-sibling::label]
+						 [not(preceding-sibling::enclosure)]
+						 [not(y)]
+	                    " mode="passthree">
+		<xsl:copy>
+			<xsl:apply-templates mode="passthree"/>
+         <x> 
+		    <at><left/><parent/></at>
+		 </x>
+         <y>
+		    <place><top/><edge/></place>
+            <at>
+               <bottom/>
+               <predecessor/>
+            </at>
+         </y>
 		</xsl:copy>
 	</xsl:template>
 
@@ -94,6 +203,12 @@
 			<xsl:apply-templates mode="passfour"/>
 		</xsl:copy>
 	</xsl:template>
+	
+	<!-- x position of an outermost  enclosure with a top down route in to it whose outermost source does not already
+	                                          have a route emanating from it and ariving into a predecessor outermost enclosure -->
+    <!-- In this context preceding and preceding-sibling will execute interchangeably - bacause imprilcation is outermost -->
+	
+	<!-- why does this have to be pass four ?? -->
 	
 	<xsl:template match="enclosure
 	                     [not(x)]
@@ -107,7 +222,8 @@
 					      ]
 						   " 
 						 mode="passfour">
-	<!-- the first top down route destination outer aligns at the left. What about subsequent? --> 				 
+	<!-- the first top down route destination outer aligns at the left. What about subsequent? --> 	
+    <!-- what probably happens is that because of  default smarts they are laid out  horizontally.  -->	
 		<xsl:copy>
 			<xsl:apply-templates mode="passfour"/>
 			<x> 

@@ -59,6 +59,12 @@
       <shape_style>
           <id>entity_type_outline</id>
           <fill-opacity>0</fill-opacity>
+          <stroke>black</stroke>
+          <stroke-width>1</stroke-width>
+      </shape_style>
+	  <shape_style>
+          <id>codedfor_entity_type_outline</id>
+          <fill-opacity>0</fill-opacity>
           <stroke>red</stroke>
           <stroke-width>1</stroke-width>
       </shape_style>
@@ -66,6 +72,12 @@
           <id>group_outline</id>
           <fill-opacity>0</fill-opacity>
           <stroke>blue</stroke>
+          <stroke-width>1</stroke-width>
+      </shape_style>
+	  	  <shape_style>
+          <id>codedfor_group_outline</id>
+          <fill-opacity>0</fill-opacity>
+          <stroke>red</stroke>
           <stroke-width>1</stroke-width>
       </shape_style>
 	  <shape_style>

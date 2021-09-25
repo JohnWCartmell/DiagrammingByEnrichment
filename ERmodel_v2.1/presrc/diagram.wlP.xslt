@@ -56,6 +56,24 @@
 	  </wlP>
     </xsl:copy>
   </xsl:template>
+  
+<!-- *************** -->
+<!-- TEMPORARY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 23 September 2021     -->
+<!-- *************** -->
+
+  <xsl:template match="label
+                        [not(wlP)]
+                    " 
+              mode="recursive_diagram_enrichment"
+              priority="40P">
+    <xsl:copy>
+      <xsl:apply-templates mode="recursive_diagram_enrichment"/>
+      <wlP>
+	     <xsl:value-of select="0"/>
+	  </wlP>
+    </xsl:copy>
+  </xsl:template>
+  
 
 </xsl:transform>
 

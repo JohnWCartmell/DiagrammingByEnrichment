@@ -1,4 +1,4 @@
-<all>
+ <all xmlns="http://www.entitymodelling.org/diagram">
       <endline_style>
          <id>testline</id>
 		 <stroke>black</stroke> 

@@ -56,6 +56,21 @@
 	  </wrP>
     </xsl:copy>
   </xsl:template>
+  
+  <!-- 23 September 2021 -->
+  <!-- TEMPORARYiLY define wrp of label to be 0-->
+    <xsl:template match="label
+                        [not(wrP)]
+                    " 
+              mode="recursive_diagram_enrichment"
+              priority="42P">
+    <xsl:copy>
+      <xsl:apply-templates mode="recursive_diagram_enrichment"/>
+      <wrP>
+	     <xsl:value-of select="0"/>
+	  </wrP>
+    </xsl:copy>
+  </xsl:template>
 
 </xsl:transform>
 

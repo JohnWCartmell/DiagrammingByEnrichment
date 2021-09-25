@@ -383,37 +383,73 @@ CHANGE HISTORY
   </xsl:template>
 
 
+<!--  23 September 2021 Use new attribute x_outer_upper_bound because labels do not have wrP attribute -->
+<!--  would like to split the  existing rule into as many as four rules -->
+<!--  start by splitting into two rules and then testing -->
+
+<!-- new rule split off for leftP-->
  <xsl:template match="xP/at[not(offset)]
                            [predecessor]
-                           [*/effective_ratio]
+						   [leftP]	
                            [../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/padding]
-                           [leftP or ../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/wP ]
-                           [rightP or edge or ../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/wlP]
-                           [leftP or edge or ../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/wrP]
+                           [../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/wlP]						   
                     " 
               mode="recursive_diagram_enrichment"
               priority="172P"
               >
     <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
-      <offset trace="8">
-          <xsl:choose>
-             <xsl:when test="leftP">
-                  <xsl:variable name="offset" as="xs:double"  select="if (leftP and outer) then -../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/(wlP + padding) else 0"/>
-                  <xsl:value-of select="$offset"/>
-             </xsl:when>
-             <xsl:otherwise>
+      <offset>
+            <xsl:value-of select="if (outer) then -../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/(wlP + padding) else 0"/>
+      </offset>      
+     </xsl:copy>
+  </xsl:template>
+  
+  <!-- not(leftP)  and outer -->
+ <xsl:template match="xP/at[not(offset)]
+                           [predecessor]
+						   [rightP | centreP]
+						   [outer]
+                           [*/effective_ratio]
+                           [../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/padding]
+                           [../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/wP ]
+                           [../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/wrP]
+                    " 
+              mode="recursive_diagram_enrichment"
+              priority="172P"
+              >
+    <xsl:copy>
+      <xsl:apply-templates mode="recursive_diagram_enrichment"/>
+      <offset trace="8B">
                   <xsl:variable name="effective_width"
                                 select = "../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/wP 
-                                           + (if(outer) 
-                                              then ../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/(wrP + padding)
-                                              else 0
-                                              )"/>
-                  <xsl:variable name="offset" as="xs:double"  select="*/effective_ratio 
-                                              * $effective_width"/>
-                      <xsl:value-of select="$offset"/> 
-             </xsl:otherwise>
-          </xsl:choose>
+								            + ../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/(wrP + padding)
+                                           "/>
+                      <xsl:value-of select="*/effective_ratio 
+                                              * $effective_width"/> 
+      </offset>      
+     </xsl:copy>
+  </xsl:template>
+  
+<!-- not(leftP) and not(outer)-->
+ <xsl:template match="xP/at[not(offset)]
+                           [predecessor]
+						   [rightP | centreP]
+						   [not(outer)]
+                           [*/effective_ratio]
+                           [../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/wP ]
+                    " 
+              mode="recursive_diagram_enrichment"
+              priority="172P"
+              >
+    <xsl:copy>
+      <xsl:apply-templates mode="recursive_diagram_enrichment"/>
+      <offset trace="8C">
+                  <xsl:variable name="effective_width"
+                                select = "../../preceding-sibling::*[self::enclosure|self::label|self::point][1]/wP 
+                                           "/>
+                      <xsl:value-of select="*/effective_ratio 
+                                              * $effective_width"/> 
       </offset>      
      </xsl:copy>
   </xsl:template>

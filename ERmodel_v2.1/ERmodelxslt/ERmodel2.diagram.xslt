@@ -46,8 +46,8 @@ CHANGE HISTORY
 					<filename>shared/endline_style_definitions.xml</filename>
 				</include>
 				<default>
-					<hmin>1.0</hmin>
-					<wmin>1.0</wmin>
+					<hmin>0.5</hmin>
+					<wmin>0.05</wmin>
 					<margin>0.2</margin>
 					<padding>0.15</padding>
 					<packing>horizontal</packing>
@@ -95,15 +95,30 @@ CHANGE HISTORY
 		<enclosure>
 			<id><xsl:value-of select="name"/></id>
 			<shape_style>entity_type_outline</shape_style>
+			<w>35</w> <!--temporary measures!!!!!!!!!!!!!!!!!***************>-->
+			<rx>0.25</rx>
+			<ry>0.25</ry>
 			<label/>
 		</enclosure>
 	</xsl:template>
 
-	<xsl:template match="entity_type" mode="passzero">
+	<xsl:template match="entity_type[diagram:enclosure]" mode="passzero">
+		<enclosure>
+			<id><xsl:value-of select="name"/></id>
+			<shape_style>codedfor_entity_type_outline</shape_style>
+			<rx>0.25</rx>  <!-- cheap and cheerful -->
+			<ry>0.25</ry>
+			<label/>
+			<xsl:apply-templates select="entity_type|group" mode="passzero"/>
+			<xsl:copy-of select="diagram:enclosure/*"/>
+		</enclosure>
+	</xsl:template>
+	
+	<xsl:template match="entity_type[not(diagram:enclosure)]" mode="passzero">
 		<enclosure>
 			<id><xsl:value-of select="name"/></id>
 			<shape_style>entity_type_outline</shape_style>
-			<rx>0.25</rx>
+			<rx>0.25</rx>  <!-- cheap and cheerful -->
 			<ry>0.25</ry>
 			<label/>
 			<xsl:apply-templates select="entity_type|group" mode="passzero"/>
@@ -111,15 +126,26 @@ CHANGE HISTORY
 		</enclosure>
 	</xsl:template>
 
-	<xsl:template match="group" mode="passzero">
+	<xsl:template match="group[diagram:enclosure]" mode="passzero">
 		<enclosure>
 			<id><xsl:value-of select="name"/></id>
-			<shape_style>group_outline</shape_style>
-			<label/>
+			<shape_style>codedfor_group_outline</shape_style>
+			<!-- <label/>  -->
 			<xsl:apply-templates select="entity_type|group" mode="passzero"/>
 			<xsl:copy-of select="diagram:enclosure/*"/>
 		</enclosure>
 	</xsl:template>
+	
+		<xsl:template match="group[not(diagram:enclosure)]" mode="passzero">
+		<enclosure>
+			<id><xsl:value-of select="name"/></id>
+			<shape_style>group_outline</shape_style>
+			<!-- <label/>  -->
+			<xsl:apply-templates select="entity_type|group" mode="passzero"/>
+			<xsl:copy-of select="diagram:enclosure/*"/>
+		</enclosure>
+	</xsl:template>
+	
 
 	<xsl:template match="composition" mode="passzero">
 		<route>

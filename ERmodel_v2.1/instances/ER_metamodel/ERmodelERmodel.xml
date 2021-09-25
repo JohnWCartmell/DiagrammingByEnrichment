@@ -141,18 +141,6 @@ DESCRIPTION
    </entity_type>
    <entity_type>
       <name>ENTITY_TYPE</name>
-	  <enclosure xmlns="http://www.entitymodelling.org/diagram">
-	     <x>
-	        <place>
-		     <left/>
-		    </place>
-            <at>
-              <right/>
-              <predecessor/>
-            </at>
-		    <delta>6</delta>
-          </x>
-	  </enclosure>
       <entity_type>
          <name>absolute</name>
       </entity_type>
@@ -320,6 +308,157 @@ DESCRIPTION
          </cardinality>
       </composition>
    </entity_type>
+      <entity_type>
+      <name>presentation</name>
+	  <!--
+	    <enclosure xmlns="http://www.entitymodelling.org/diagram">
+	     <x>
+	        <place>
+		     <left/>
+		    </place>
+            <at>
+              <right/>
+              <predecessor/>
+            </at>
+		    <delta>16</delta>
+          </x>
+	  </enclosure>
+	  -->
+      <dependency_group>
+      </dependency_group>
+      <attribute>
+         <name>x</name>
+         <type>
+            <float/>
+         </type>
+         <optional/>
+      </attribute>
+      <attribute>
+         <name>y</name>
+         <type>
+            <float/>
+         </type>
+         <optional/>
+      </attribute>
+      <attribute>
+         <name>h</name>
+         <type>
+            <float/>
+         </type>
+         <optional/>
+      </attribute>
+      <attribute>
+         <name>w</name>
+         <type>
+            <float/>
+         </type>
+         <optional/>
+      </attribute>
+      <attribute>
+         <name>deltah</name>
+         <type>
+            <float/>
+         </type>
+         <optional/>
+      </attribute>
+      <attribute>
+         <name>deltaw</name>
+         <type>
+            <float/>
+         </type>
+         <optional/>
+      </attribute>
+      <attribute>
+         <name>sign</name>
+         <type>
+            <float/>
+         </type>
+         <optional/>
+      </attribute>
+      <composition>
+         <name>xl</name>
+         <type>position</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+      </composition>
+      <composition>
+         <name>xc</name>
+         <type>relative</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+      </composition>
+      <composition>
+         <name>xr</name>
+         <type>relative</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+      </composition>
+      <composition>
+         <name>yt</name>
+         <type>position</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+      </composition>
+      <composition>
+         <name>ym</name>
+         <type>relative</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+      </composition>
+      <composition>
+         <name>yb</name>
+         <type>relative</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+      </composition>
+      <composition>
+         <name>shape</name>
+         <type>CustomShape</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+      </composition>
+      <composition>
+         <name>name</name>
+         <type>render</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+      </composition>
+      <reference>
+         <name>rightOf</name>
+         <type>ENTITY_TYPE</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+         <diagonal>
+            <theabsolute/>
+         </diagonal>
+         <riser>
+            <theabsolute/>
+         </riser>
+      </reference>
+      <reference>
+         <name>below</name>
+         <type>ENTITY_TYPE</type>
+         <cardinality>
+            <ZeroOrOne/>
+         </cardinality>
+         <diagonal>
+            <theabsolute/>
+         </diagonal>
+         <riser>
+            <theabsolute/>
+         </riser>
+      </reference>
+   </entity_type>
+ 
    <entity_type>
       <name>Relationship</name>
       <dependency>
@@ -519,155 +658,7 @@ DESCRIPTION
          </type>
       </attribute>
    </entity_type>
-   <entity_type>
-      <name>presentation</name>
-	    <enclosure xmlns="http://www.entitymodelling.org/diagram">
-	     <x>
-	        <place>
-		     <left/>
-		    </place>
-            <at>
-              <right/>
-              <predecessor/>
-            </at>
-		    <delta>16</delta>
-          </x>
-	  </enclosure>
-      <dependency_group>
-      </dependency_group>
-      <attribute>
-         <name>x</name>
-         <type>
-            <float/>
-         </type>
-         <optional/>
-      </attribute>
-      <attribute>
-         <name>y</name>
-         <type>
-            <float/>
-         </type>
-         <optional/>
-      </attribute>
-      <attribute>
-         <name>h</name>
-         <type>
-            <float/>
-         </type>
-         <optional/>
-      </attribute>
-      <attribute>
-         <name>w</name>
-         <type>
-            <float/>
-         </type>
-         <optional/>
-      </attribute>
-      <attribute>
-         <name>deltah</name>
-         <type>
-            <float/>
-         </type>
-         <optional/>
-      </attribute>
-      <attribute>
-         <name>deltaw</name>
-         <type>
-            <float/>
-         </type>
-         <optional/>
-      </attribute>
-      <attribute>
-         <name>sign</name>
-         <type>
-            <float/>
-         </type>
-         <optional/>
-      </attribute>
-      <composition>
-         <name>xl</name>
-         <type>position</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-      </composition>
-      <composition>
-         <name>xc</name>
-         <type>relative</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-      </composition>
-      <composition>
-         <name>xr</name>
-         <type>relative</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-      </composition>
-      <composition>
-         <name>yt</name>
-         <type>position</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-      </composition>
-      <composition>
-         <name>ym</name>
-         <type>relative</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-      </composition>
-      <composition>
-         <name>yb</name>
-         <type>relative</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-      </composition>
-      <composition>
-         <name>shape</name>
-         <type>CustomShape</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-      </composition>
-      <composition>
-         <name>name</name>
-         <type>render</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-      </composition>
-      <reference>
-         <name>rightOf</name>
-         <type>ENTITY_TYPE</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-         <diagonal>
-            <theabsolute/>
-         </diagonal>
-         <riser>
-            <theabsolute/>
-         </riser>
-      </reference>
-      <reference>
-         <name>below</name>
-         <type>ENTITY_TYPE</type>
-         <cardinality>
-            <ZeroOrOne/>
-         </cardinality>
-         <diagonal>
-            <theabsolute/>
-         </diagonal>
-         <riser>
-            <theabsolute/>
-         </riser>
-      </reference>
-   </entity_type>
-   <entity_type>
+  <entity_type>
       <name>path</name>
       <composition>
          <type>label</type>
@@ -1043,6 +1034,20 @@ DESCRIPTION
 		 <delta>-10.5</delta>
       </x>
 	  </enclosure>
+	     <entity_type>
+      <name>xmlStyle(2)</name>
+      <dependency_group>
+      </dependency_group>
+      <entity_type>
+         <name>Attribute</name>
+      </entity_type>
+      <entity_type>
+         <name>Element(2)</name>
+      </entity_type>
+      <entity_type>
+         <name>Anonymous(2)</name>
+      </entity_type>
+   </entity_type>
       <entity_type>
          <name>implementationOf</name>
          <dependency>
@@ -1321,20 +1326,7 @@ DESCRIPTION
          </entity_type>
       </entity_type>
    </group>
-   <entity_type>
-      <name>xmlStyle(2)</name>
-      <dependency_group>
-      </dependency_group>
-      <entity_type>
-         <name>Attribute</name>
-      </entity_type>
-      <entity_type>
-         <name>Element(2)</name>
-      </entity_type>
-      <entity_type>
-         <name>Anonymous(2)</name>
-      </entity_type>
-   </entity_type>
+
    <entity_type>
       <name>xmlStyle(1)</name>
       <entity_type>
