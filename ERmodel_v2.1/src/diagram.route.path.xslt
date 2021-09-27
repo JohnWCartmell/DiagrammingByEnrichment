@@ -4,6 +4,7 @@
 		xmlns="http://www.entitymodelling.org/diagram"
 		xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+        xmlns:math="http://www.w3.org/2005/xpath-functions/math"
 		xmlns:diagram="http://www.entitymodelling.org/diagram" 
 		xpath-default-namespace="http://www.entitymodelling.org/diagram">
 
@@ -18,7 +19,39 @@
 	<!-- ************************** -->
 	<!-- route  +path       -->
 	<!-- ************************** -->
-	<xsl:template match="route
+
+	<xsl:template match="route[top_down]
+						 [not(path)]
+						" 
+			mode="recursive_diagram_enrichment"
+			priority="40">		  
+		<xsl:copy>
+			<xsl:apply-templates mode="recursive_diagram_enrichment"/>
+			<path>
+				<ramp/>
+			</path>
+		</xsl:copy>
+	</xsl:template>
+
+
+	<!-- In future when circular dependencies resolved 
+	<xsl:template match="route[top_down]
+		                 [number(source/angleToOtherEnd) &gt; math:pi()]
+						 [not(path)]
+						" 
+			mode="recursive_diagram_enrichment"
+			priority="40">		  
+		<xsl:copy>
+			<xsl:apply-templates mode="recursive_diagram_enrichment"/>
+			<path>
+				<ew><w>1</w></ew>
+				<ramp/>
+			</path>
+		</xsl:copy>
+	</xsl:template>
+
+	<xsl:template match="route[top_down]
+		                [number(source/angleToOtherEnd) &lt;= math:pi()]
 						[not(path)]
 						" 
 			mode="recursive_diagram_enrichment"
@@ -30,6 +63,24 @@
 			</path>
 		</xsl:copy>
 	</xsl:template>
+-->
+
+	<!-- ************************** -->
+	<!-- route  +path       -->
+	<!-- ************************** -->
+	<xsl:template match="route[sideways]
+						[not(path)]
+						" 
+			mode="recursive_diagram_enrichment"
+			priority="40">		  
+		<xsl:copy>
+			<xsl:apply-templates mode="recursive_diagram_enrichment"/>
+			<path>
+				<ramp/>
+			</path>
+		</xsl:copy>
+	</xsl:template>
+
 
 	<!-- ***************************** -->
 	<!--   source is right_side            -->
