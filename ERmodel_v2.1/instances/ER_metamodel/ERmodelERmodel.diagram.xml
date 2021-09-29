@@ -29,6 +29,7 @@
    <enclosure>
       <id>entity_model</id>
       <shape_style>entity_type_outline</shape_style>
+      <x><abs>5</abs>abs</x> <!--hand edit-->
       <w>35</w>
       <rx>0.25</rx>
       <ry>0.25</ry>

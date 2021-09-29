@@ -54,7 +54,55 @@
     </xsl:copy>
   </xsl:template>
 
- 
+ <!-- ************************* -->
+<!--ewP[source_sweep] + deltax  -->               <!-- NEED TP FULLY PARAMETERISE FOR NS CARDINAL -->
+<!-- ************************** -->
+
+<xsl:template match="route[top_down]/path/ewP[source_sweep]
+                      [not(deltax)]
+                      [../../source/thisEndy]
+                      [../../source/otherEndy]
+                      [../../source/thisEndx]
+                      [../../source/otherEndx]
+                    " 
+                  mode="recursive_diagram_enrichment"
+                  priority="56P">
+   <xsl:copy>
+      <xsl:apply-templates mode="recursive_diagram_enrichment"/>
+      <deltax><xsl:value-of select=
+               "if (../../source/(number(otherEndy) &gt; number(thisEndy)) )
+               then 0
+               else if (../../source/(number(otherEndx) &lt; number(thisEndx)) )
+               then - 1
+               else 1 "/>
+      </deltax>
+   </xsl:copy>
+</xsl:template>
+
+<!-- ******************************** -->
+<!--ewP[destination_sweep] + deltax   -->               <!-- NEED TO FULLY PARAMETERISE FOR NS CARDINAL -->
+<!-- ******************************** -->
+
+<xsl:template match="route[top_down]/path/ewP[destination_sweep]
+                      [not(deltax)]
+                      [../../destination/thisEndy]
+                      [../../destination/otherEndy]
+                      [../../destination/thisEndx]
+                      [../../destination/otherEndx]
+                    " 
+                  mode="recursive_diagram_enrichment"
+                  priority="56P">
+   <xsl:copy>
+      <xsl:apply-templates mode="recursive_diagram_enrichment"/>
+      <deltax><xsl:value-of select=
+               "if (../../destination/(number(otherEndy) &lt; number(thisEndy)) )
+               then 0
+               else if (../../destination/(number(otherEndx) &lt; number(thisEndx)) )
+               then 1
+               else - 1 "/>
+      </deltax>
+   </xsl:copy>
+</xsl:template>
 
 
 </xsl:transform>

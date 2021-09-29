@@ -4,6 +4,7 @@
                xmlns="http://www.entitymodelling.org/diagram"
                xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+               xmlns:math="http://www.w3.org/2005/xpath-functions/math"
                xmlns:diagram="http://www.entitymodelling.org/diagram" 
                xpath-default-namespace="http://www.entitymodelling.org/diagram">
 
@@ -150,23 +151,7 @@
    </xsl:copy>
 </xsl:template>
 
-<!-- *********** -->
-<!-- stack/wP -->
-<!-- *********** -->
-<!-- NO SUCH THING?
-<xsl:template match="stack[not(wP)]
-                    [every $label in label satisfies $label/wP]
-                    " 
-              mode="recursive_diagram_enrichment"
-              priority="42P">
-   <xsl:copy>
-      <xsl:apply-templates mode="recursive_diagram_enrichment"/>
-      <wP>
-        <xsl:value-of select="max(label/wP)"/>
-      </wP>
-   </xsl:copy>
-</xsl:template>
--->
+
 
 
 

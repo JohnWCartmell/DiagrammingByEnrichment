@@ -20,15 +20,17 @@
 <!-- route/source/bottom_edge  +deltax  -->
 <!-- ************************************* -->
 <xsl:template match="route
-                     /source[slotNo]/bottom_edge    
+                     /source[slotNo][key('Enclosure',id)/w]/bottom_edge    
 					 [not(deltax)]
                     " 
               mode="recursive_diagram_enrichment"
               priority="42">
    <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
+      <xsl:variable name="noOfSlots" as="xs:integer" select="count((key('bottom_edge_is_endpoint_of',../id)))"/>
+      <noOfSlots><xsl:value-of select="$noOfSlots"/></noOfSlots>
       <deltax>
-		  <xsl:value-of select="(../slotNo + 1) * 0.3"/>
+		  <xsl:value-of select="(key('Enclosure',../id)/w)  *  (../slotNo + 1) div ($noOfSlots + 1)"/>
       </deltax>
    </xsl:copy>
 </xsl:template>
@@ -37,15 +39,17 @@
 <!-- route/destination/top_edge  +deltax  -->
 <!-- ************************************* -->
 <xsl:template match="route
-                     /destination[slotNo]/top_edge    
+                     /destination[slotNo][key('Enclosure',id)/w]/top_edge    
 					 [not(deltax)]
                     " 
               mode="recursive_diagram_enrichment"
               priority="42">
    <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
+      <xsl:variable name="noOfSlots" as="xs:integer" select="count((key('top_edge_is_endpoint_of',../id)))"/>
+      <noOfSlots><xsl:value-of select="$noOfSlots"/></noOfSlots>
       <deltax>
-		  <xsl:value-of select="(../slotNo + 1) * 0.3"/>
+        <xsl:value-of select="(key('Enclosure',../id)/w)  *  (../slotNo + 1) div ($noOfSlots + 1)"/>
       </deltax>
    </xsl:copy>
 </xsl:template>

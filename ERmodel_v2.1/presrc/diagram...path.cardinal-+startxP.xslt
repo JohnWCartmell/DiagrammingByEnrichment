@@ -47,7 +47,7 @@
     <xsl:copy>
       <xsl:apply-templates mode="recursive_diagram_enrichment"/>
       <startxP>
-        <xsl:value-of select="endxP - deltaxP"/>
+        <xsl:value-of select="number(endxP) - number(deltaxP)"/>
       </startxP>
     </xsl:copy>
   </xsl:template>

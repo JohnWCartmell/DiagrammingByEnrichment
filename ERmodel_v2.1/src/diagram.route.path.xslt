@@ -28,42 +28,13 @@
 		<xsl:copy>
 			<xsl:apply-templates mode="recursive_diagram_enrichment"/>
 			<path>
+				<ew><source_sweep/></ew>
 				<ramp/>
+				<ew><destination_sweep/></ew>
 			</path>
 		</xsl:copy>
 	</xsl:template>
 
-
-	<!-- In future when circular dependencies resolved 
-	<xsl:template match="route[top_down]
-		                 [number(source/angleToOtherEnd) &gt; math:pi()]
-						 [not(path)]
-						" 
-			mode="recursive_diagram_enrichment"
-			priority="40">		  
-		<xsl:copy>
-			<xsl:apply-templates mode="recursive_diagram_enrichment"/>
-			<path>
-				<ew><w>1</w></ew>
-				<ramp/>
-			</path>
-		</xsl:copy>
-	</xsl:template>
-
-	<xsl:template match="route[top_down]
-		                [number(source/angleToOtherEnd) &lt;= math:pi()]
-						[not(path)]
-						" 
-			mode="recursive_diagram_enrichment"
-			priority="40">		  
-		<xsl:copy>
-			<xsl:apply-templates mode="recursive_diagram_enrichment"/>
-			<path>
-				<ramp/>
-			</path>
-		</xsl:copy>
-	</xsl:template>
--->
 
 	<!-- ************************** -->
 	<!-- route  +path       -->
