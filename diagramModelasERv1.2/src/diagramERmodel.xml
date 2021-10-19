@@ -487,6 +487,9 @@
 				</type>
 				<optional/>
 			</attribute>
+			<include>
+				 <filename>enclosure.rules.xml</filename>
+		   </include>
 			<reference>
 				<name>shape_style</name>
 				<type>shape_style</type>
