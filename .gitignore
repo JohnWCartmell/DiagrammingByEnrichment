@@ -1,4 +1,4 @@
-ERmodel_v2.1/xslt/
+ERmodel_v2.1/xslt/**.xslt
 diagramModelasERv1.2/bin/
 **/docs/**
 **/temp/**
