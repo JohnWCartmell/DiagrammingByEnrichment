@@ -14,22 +14,18 @@
 
 	<xsl:output method="xml" indent="yes" />
 	
-	<!-- enclosure => set of route ... routes down to or into an outermost enclosure -->
-	<xsl:key name="IncomingTopdownRoute"  match="route[top_down]" use="destination/abstract"/> 
+	<!-- previously keys declared here -->
 
-	<!-- enclosure => set of route ... routes down from or from within  an outermost enclosure -->
-	<xsl:key name="OutgoingTopdownRoute" match="route[top_down]" use="source/abstract"/>
-	
-	<!-- enclosure => set of route  .. routes down to the enclosure --> 
-	<xsl:key name="TerminatingIncomingTopdownRoute" match="route[top_down]" use="destination/id"/>
 
 	<xsl:template match="*" mode="passtwo">
 		<xsl:copy>
 			<xsl:apply-templates mode="passtwo"/>
 		</xsl:copy>
 	</xsl:template>
+
+
 	
-	<!-- y position of an outermost  enclosure with a top down route in to it or one of its child enclosures puts it 1cm beneath the outermost enclosure of its source	-->
+	<!-- y position of an outermost  enclosure with an incoming top down route>-->
 	<xsl:template match="enclosure[key('IncomingTopdownRoute',id)]
 	                     [not(y)]" 
 						 mode="passtwo">
@@ -42,7 +38,10 @@
 				<at>
 					<bottom/>
 					<of>
-						<xsl:value-of select="key('IncomingTopdownRoute',id)[1]/source/abstract"/>
+						<xsl:value-of select="key('OutermostEnclosuresFromWhichIncomingTopDownRoute',id)
+							                       [compositionalDepth+1=current()/compositionalDepth]
+							                      [1]/id"/>
+							                      <!-- -->
 					</of>
 				</at>
 				<delta>1</delta>   <!-- make room for incoming top down route -->
@@ -102,14 +101,6 @@
                <predecessor/>
             </at>
          </y>
-		 <!--
-			<y> 
-				<at>
-					<top/>
-					<parent/>
-				</at>
-			</y>
-			-->
 		</xsl:copy>
 	</xsl:template>
 	
@@ -133,14 +124,6 @@
                <parent/>
             </at>
          </y>
-		 <!--
-			<y> 
-				<at>
-					<top/>
-					<parent/>
-				</at>
-			</y>
-			-->
 		</xsl:copy>
 	</xsl:template>
 	
@@ -162,14 +145,6 @@
                <predecessor/>
             </at>
          </y>
-		 <!--
-			<y> 
-				<at>
-					<top/>
-					<parent/>
-				</at>
-			</y>
-			-->
 		</xsl:copy>
 	</xsl:template>
 	

@@ -27,6 +27,8 @@
       <end_style>testline</end_style>
    </default>
    <enclosure>
+      <depthOfNesting>0</depthOfNesting>
+      <compositionalDepth>0</compositionalDepth>
       <id>entity_model</id>
       <shape_style>entity_type_outline</shape_style>
       <w>35</w>
@@ -35,6 +37,8 @@
       <label/>
    </enclosure>
    <enclosure>
+      <compositionalDepth>1</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>diagram</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
@@ -61,6 +65,8 @@
       </x>
    </enclosure>
    <enclosure>
+      <compositionalDepth>1</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>defaults</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
@@ -78,6 +84,8 @@
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>1</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>xml</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
@@ -95,12 +103,15 @@
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>1</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>ENTITY_TYPE</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
       <ry>0.25</ry>
       <label/>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>absolute</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -124,12 +135,14 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>entity_type_like</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>entity_type</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -153,6 +166,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>group</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -188,6 +202,8 @@
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>2</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>attribute</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
@@ -214,6 +230,8 @@
       </x>
    </enclosure>
    <enclosure>
+      <compositionalDepth>2</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>dependency_group</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
@@ -231,6 +249,8 @@
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>3</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>presentation</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
@@ -242,24 +262,28 @@
          </place>
          <at>
             <bottom/>
-            <of>ENTITY_TYPE</of>
+            <of>dependency_group</of>
          </at>
          <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>2</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>Relationship</id>
       <shape_style>codedfor_entity_type_outline</shape_style>
       <rx>0.25</rx>
       <ry>0.25</ry>
       <label/>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>reference_or_dependency</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>dependency</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -283,6 +307,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>reference</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -313,6 +338,7 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>constructed_relationship</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -326,6 +352,7 @@
          </x>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>composition</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -351,6 +378,8 @@
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>3</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>path</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
@@ -377,6 +406,8 @@
       </x>
    </enclosure>
    <enclosure>
+      <compositionalDepth>3</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>sequence</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
@@ -394,9 +425,12 @@
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>3</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>righthand_children</id>
       <shape_style>group_outline</shape_style>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>projection</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -414,6 +448,7 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>identifying(1)</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -431,12 +466,14 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>cardinality</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>ZeroOrOne</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -460,6 +497,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>ExactlyOne</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -473,6 +511,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>ZeroOneOrMore</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -486,6 +525,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>OneOrMore</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -510,6 +550,7 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>inherited</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -518,22 +559,13 @@
          <y>
             <place>
                <top/>
+               <edge/>
             </place>
             <at>
-               <bottom/>
-               <of>identifying(1)</of>
+               <top/>
+               <predecessor/>
             </at>
-            <delta>1</delta>
          </y>
-         <x>
-            <place>
-               <left/>
-            </place>
-            <at>
-               <left/>
-               <of>identifying(1)</of>
-            </at>
-         </x>
       </enclosure>
       <y>
          <place>
@@ -547,9 +579,12 @@
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>3</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>composition_children</id>
       <shape_style>group_outline</shape_style>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>transient</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -567,12 +602,14 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>initialiser</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>pullback</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -596,6 +633,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>copy</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -631,18 +669,22 @@
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>4</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>navigation</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
       <ry>0.25</ry>
       <label/>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>complex</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>join</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -666,6 +708,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>aggregate</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -696,6 +739,7 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>component</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -704,27 +748,20 @@
          <y>
             <place>
                <top/>
+               <edge/>
             </place>
             <at>
-               <bottom/>
-               <of>complex</of>
+               <top/>
+               <predecessor/>
             </at>
-            <delta>1</delta>
          </y>
-         <x>
-            <place>
-               <left/>
-            </place>
-            <at>
-               <left/>
-               <of>complex</of>
-            </at>
-         </x>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>component children</id>
          <shape_style>group_outline</shape_style>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>identity</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -732,6 +769,7 @@
             <label/>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>theabsolute</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -757,21 +795,25 @@
          </place>
          <at>
             <bottom/>
-            <of>Relationship</of>
+            <of>composition_children</of>
          </at>
          <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>4</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>presentation_children</id>
       <shape_style>group_outline</shape_style>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>position</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>relative</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -795,6 +837,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>abs</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -808,6 +851,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>local</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -821,6 +865,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>default</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -845,12 +890,14 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>CustomShape</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>Top</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -874,6 +921,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>TopLeft</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -887,6 +935,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>TopRight</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -900,6 +949,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>MiddleRight</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -913,6 +963,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>MiddleLeft</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -926,6 +977,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>BottomLeft</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -939,6 +991,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>BottomRight</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -952,6 +1005,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>Bottom</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -996,15 +1050,19 @@
       </x>
    </enclosure>
    <enclosure>
+      <compositionalDepth>3</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>attribute_children</id>
       <shape_style>codedfor_group_outline</shape_style>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>xmlStyle(2)</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>Attribute</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1028,6 +1086,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>Element(2)</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1041,6 +1100,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>Anonymous(2)</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1065,6 +1125,7 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>implementationOf</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -1082,12 +1143,14 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>value_type</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>boolean</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1111,6 +1174,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>date</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1124,6 +1188,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>dateTime</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1137,6 +1202,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>integer</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1150,6 +1216,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>float</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1163,6 +1230,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>nonNegativeInteger</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1176,6 +1244,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>positiveInteger</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1189,6 +1258,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>string</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1202,6 +1272,7 @@
             </x>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>time</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1226,6 +1297,7 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>identifying(2)</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -1243,6 +1315,7 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>optional</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -1260,6 +1333,7 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>deprecated</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -1298,9 +1372,12 @@
       </x>
    </enclosure>
    <enclosure>
+      <compositionalDepth>4</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>path_children</id>
       <shape_style>codedfor_group_outline</shape_style>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>label</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -1318,12 +1395,14 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>src_or_dest</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>ToSrc</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1347,6 +1426,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>ToDest</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1371,12 +1451,14 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>step</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>vstep</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1400,6 +1482,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>hstep</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1444,18 +1527,23 @@
       </x>
    </enclosure>
    <enclosure>
+      <compositionalDepth>5</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>path_grandchildren</id>
-      <shape_style>codedfor_group_outline</shape_style>
+      <shape_style>group_outline</shape_style>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>label_children</id>
          <shape_style>group_outline</shape_style>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>render</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
             <ry>0.25</ry>
             <label/>
             <enclosure>
+               <depthOfNesting>3</depthOfNesting>
                <id>None</id>
                <shape_style>entity_type_outline</shape_style>
                <rx>0.25</rx>
@@ -1479,6 +1567,7 @@
                </y>
             </enclosure>
             <enclosure>
+               <depthOfNesting>3</depthOfNesting>
                <id>Split</id>
                <shape_style>entity_type_outline</shape_style>
                <rx>0.25</rx>
@@ -1492,6 +1581,7 @@
                </x>
             </enclosure>
             <enclosure>
+               <depthOfNesting>3</depthOfNesting>
                <id>NoSplit</id>
                <shape_style>entity_type_outline</shape_style>
                <rx>0.25</rx>
@@ -1516,12 +1606,14 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>relative_position</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
             <ry>0.25</ry>
             <label/>
             <enclosure>
+               <depthOfNesting>3</depthOfNesting>
                <id>Right</id>
                <shape_style>entity_type_outline</shape_style>
                <rx>0.25</rx>
@@ -1545,6 +1637,7 @@
                </y>
             </enclosure>
             <enclosure>
+               <depthOfNesting>3</depthOfNesting>
                <id>Left</id>
                <shape_style>entity_type_outline</shape_style>
                <rx>0.25</rx>
@@ -1558,6 +1651,7 @@
                </x>
             </enclosure>
             <enclosure>
+               <depthOfNesting>3</depthOfNesting>
                <id>Upside</id>
                <shape_style>entity_type_outline</shape_style>
                <rx>0.25</rx>
@@ -1571,6 +1665,7 @@
                </x>
             </enclosure>
             <enclosure>
+               <depthOfNesting>3</depthOfNesting>
                <id>Downside</id>
                <shape_style>entity_type_outline</shape_style>
                <rx>0.25</rx>
@@ -1596,12 +1691,14 @@
          </enclosure>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>dimension</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
          <ry>0.25</ry>
          <label/>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>reldim</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1625,6 +1722,7 @@
             </y>
          </enclosure>
          <enclosure>
+            <depthOfNesting>2</depthOfNesting>
             <id>absdim</id>
             <shape_style>entity_type_outline</shape_style>
             <rx>0.25</rx>
@@ -1648,16 +1746,7 @@
             </at>
          </y>
       </enclosure>
-      <x xmlns:era="http://www.entitymodelling.org/ERmodel">
-         <place>
-            <left/>
-         </place>
-         <at>
-            <left/>
-            <of>path_children</of>
-         </at>
-      </x>
-      <y xmlns:era="http://www.entitymodelling.org/ERmodel">
+      <y>
          <place>
             <top/>
          </place>
@@ -1665,16 +1754,19 @@
             <bottom/>
             <of>path_children</of>
          </at>
-         <delta>2.5</delta>
+         <delta>1</delta>
       </y>
    </enclosure>
    <enclosure>
+      <compositionalDepth>2</compositionalDepth>
+      <depthOfNesting>0</depthOfNesting>
       <id>xmlStyle(1)</id>
       <shape_style>entity_type_outline</shape_style>
       <rx>0.25</rx>
       <ry>0.25</ry>
       <label/>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>Element(1)</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -1698,6 +1790,7 @@
          </y>
       </enclosure>
       <enclosure>
+         <depthOfNesting>1</depthOfNesting>
          <id>Anonymous(1)</id>
          <shape_style>entity_type_outline</shape_style>
          <rx>0.25</rx>
@@ -1727,11 +1820,13 @@
          <id>entity_model</id>
          <annotation/>
          <abstract>entity_model</abstract>
+         <oldabstract>entity_model</oldabstract>
       </source>
       <destination>
          <id>entity_type_like</id>
          <annotation/>
          <abstract>ENTITY_TYPE</abstract>
+         <oldabstract>ENTITY_TYPE</oldabstract>
       </destination>
    </route>
    <route>
@@ -1740,11 +1835,13 @@
          <id>entity_model</id>
          <annotation/>
          <abstract>entity_model</abstract>
+         <oldabstract>entity_model</oldabstract>
       </source>
       <destination>
          <id>absolute</id>
          <annotation/>
          <abstract>ENTITY_TYPE</abstract>
+         <oldabstract>ENTITY_TYPE</oldabstract>
       </destination>
    </route>
    <route>
@@ -1753,11 +1850,13 @@
          <id>entity_model</id>
          <annotation>presentation</annotation>
          <abstract>entity_model</abstract>
+         <oldabstract>entity_model</oldabstract>
       </source>
       <destination>
          <id>diagram</id>
          <annotation/>
          <abstract>diagram</abstract>
+         <oldabstract>diagram</oldabstract>
       </destination>
    </route>
    <route>
@@ -1766,11 +1865,13 @@
          <id>entity_model</id>
          <annotation/>
          <abstract>entity_model</abstract>
+         <oldabstract>entity_model</oldabstract>
       </source>
       <destination>
          <id>defaults</id>
          <annotation/>
          <abstract>defaults</abstract>
+         <oldabstract>defaults</oldabstract>
       </destination>
    </route>
    <route>
@@ -1779,11 +1880,13 @@
          <id>entity_model</id>
          <annotation/>
          <abstract>entity_model</abstract>
+         <oldabstract>entity_model</oldabstract>
       </source>
       <destination>
          <id>xml</id>
          <annotation/>
          <abstract>xml</abstract>
+         <oldabstract>xml</oldabstract>
       </destination>
    </route>
    <route>
@@ -1792,11 +1895,13 @@
          <id>xml</id>
          <annotation>attributeDefault</annotation>
          <abstract>xml</abstract>
+         <oldabstract>xml</oldabstract>
       </source>
       <destination>
          <id>xmlStyle(2)</id>
          <annotation/>
          <abstract>attribute_children</abstract>
+         <oldabstract>attribute_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -1805,11 +1910,13 @@
          <id>entity_type</id>
          <annotation>xmlRepresentation</annotation>
          <abstract>ENTITY_TYPE</abstract>
+         <oldabstract>ENTITY_TYPE</oldabstract>
       </source>
       <destination>
          <id>xmlStyle(1)</id>
          <annotation/>
          <abstract>xmlStyle(1)</abstract>
+         <oldabstract>xmlStyle(1)</oldabstract>
       </destination>
    </route>
    <route>
@@ -1817,12 +1924,14 @@
       <source>
          <id>entity_type_like</id>
          <annotation/>
-         <abstract/>
+         <abstract>ENTITY_TYPE</abstract>
+         <oldabstract/>
       </source>
       <destination>
          <id>entity_type_like</id>
          <annotation/>
-         <abstract/>
+         <abstract>ENTITY_TYPE</abstract>
+         <oldabstract/>
       </destination>
    </route>
    <route>
@@ -1831,11 +1940,13 @@
          <id>ENTITY_TYPE</id>
          <annotation/>
          <abstract>ENTITY_TYPE</abstract>
+         <oldabstract>ENTITY_TYPE</oldabstract>
       </source>
       <destination>
          <id>presentation</id>
          <annotation/>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </destination>
    </route>
    <route>
@@ -1844,11 +1955,13 @@
          <id>ENTITY_TYPE</id>
          <annotation/>
          <abstract>ENTITY_TYPE</abstract>
+         <oldabstract>ENTITY_TYPE</oldabstract>
       </source>
       <destination>
          <id>dependency_group</id>
          <annotation/>
          <abstract>dependency_group</abstract>
+         <oldabstract>dependency_group</oldabstract>
       </destination>
    </route>
    <route>
@@ -1857,11 +1970,13 @@
          <id>ENTITY_TYPE</id>
          <annotation/>
          <abstract>ENTITY_TYPE</abstract>
+         <oldabstract>ENTITY_TYPE</oldabstract>
       </source>
       <destination>
          <id>Relationship</id>
          <annotation>..</annotation>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </destination>
    </route>
    <route>
@@ -1870,11 +1985,13 @@
          <id>ENTITY_TYPE</id>
          <annotation/>
          <abstract>ENTITY_TYPE</abstract>
+         <oldabstract>ENTITY_TYPE</oldabstract>
       </source>
       <destination>
          <id>attribute</id>
          <annotation>..</annotation>
          <abstract>attribute</abstract>
+         <oldabstract>attribute</oldabstract>
       </destination>
    </route>
    <route>
@@ -1883,11 +2000,13 @@
          <id>attribute</id>
          <annotation/>
          <abstract>attribute</abstract>
+         <oldabstract>attribute</oldabstract>
       </source>
       <destination>
          <id>implementationOf</id>
          <annotation>..</annotation>
          <abstract>attribute_children</abstract>
+         <oldabstract>attribute_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -1896,11 +2015,13 @@
          <id>attribute</id>
          <annotation>type</annotation>
          <abstract>attribute</abstract>
+         <oldabstract>attribute</oldabstract>
       </source>
       <destination>
          <id>value_type</id>
          <annotation/>
          <abstract>attribute_children</abstract>
+         <oldabstract>attribute_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -1909,11 +2030,13 @@
          <id>attribute</id>
          <annotation/>
          <abstract>attribute</abstract>
+         <oldabstract>attribute</oldabstract>
       </source>
       <destination>
          <id>identifying(2)</id>
          <annotation/>
          <abstract>attribute_children</abstract>
+         <oldabstract>attribute_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -1922,11 +2045,13 @@
          <id>attribute</id>
          <annotation/>
          <abstract>attribute</abstract>
+         <oldabstract>attribute</oldabstract>
       </source>
       <destination>
          <id>optional</id>
          <annotation/>
          <abstract>attribute_children</abstract>
+         <oldabstract>attribute_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -1935,11 +2060,13 @@
          <id>attribute</id>
          <annotation/>
          <abstract>attribute</abstract>
+         <oldabstract>attribute</oldabstract>
       </source>
       <destination>
          <id>deprecated</id>
          <annotation/>
          <abstract>attribute_children</abstract>
+         <oldabstract>attribute_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -1948,11 +2075,13 @@
          <id>attribute</id>
          <annotation>xmlStyle</annotation>
          <abstract>attribute</abstract>
+         <oldabstract>attribute</oldabstract>
       </source>
       <destination>
          <id>xmlStyle(2)</id>
          <annotation/>
          <abstract>attribute_children</abstract>
+         <oldabstract>attribute_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -1961,11 +2090,13 @@
          <id>dependency_group</id>
          <annotation/>
          <abstract>dependency_group</abstract>
+         <oldabstract>dependency_group</oldabstract>
       </source>
       <destination>
          <id>presentation</id>
          <annotation/>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </destination>
    </route>
    <route>
@@ -1974,11 +2105,13 @@
          <id>presentation</id>
          <annotation>xl</annotation>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </source>
       <destination>
          <id>position</id>
          <annotation/>
          <abstract>presentation_children</abstract>
+         <oldabstract>presentation_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -1987,11 +2120,13 @@
          <id>presentation</id>
          <annotation>xc</annotation>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </source>
       <destination>
          <id>relative</id>
          <annotation/>
          <abstract>presentation_children</abstract>
+         <oldabstract>presentation_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2000,11 +2135,13 @@
          <id>presentation</id>
          <annotation>xr</annotation>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </source>
       <destination>
          <id>relative</id>
          <annotation/>
          <abstract>presentation_children</abstract>
+         <oldabstract>presentation_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2013,11 +2150,13 @@
          <id>presentation</id>
          <annotation>yt</annotation>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </source>
       <destination>
          <id>position</id>
          <annotation/>
          <abstract>presentation_children</abstract>
+         <oldabstract>presentation_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2026,11 +2165,13 @@
          <id>presentation</id>
          <annotation>ym</annotation>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </source>
       <destination>
          <id>relative</id>
          <annotation/>
          <abstract>presentation_children</abstract>
+         <oldabstract>presentation_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2039,11 +2180,13 @@
          <id>presentation</id>
          <annotation>yb</annotation>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </source>
       <destination>
          <id>relative</id>
          <annotation/>
          <abstract>presentation_children</abstract>
+         <oldabstract>presentation_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2052,11 +2195,13 @@
          <id>presentation</id>
          <annotation>shape</annotation>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </source>
       <destination>
          <id>CustomShape</id>
          <annotation/>
          <abstract>presentation_children</abstract>
+         <oldabstract>presentation_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2065,11 +2210,13 @@
          <id>presentation</id>
          <annotation>name</annotation>
          <abstract>presentation</abstract>
+         <oldabstract>presentation</oldabstract>
       </source>
       <destination>
          <id>render</id>
          <annotation/>
          <abstract>path_grandchildren</abstract>
+         <oldabstract>path_grandchildren</oldabstract>
       </destination>
    </route>
    <route>
@@ -2078,11 +2225,13 @@
          <id>reference</id>
          <annotation>diagonal</annotation>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>navigation</id>
          <annotation/>
          <abstract>navigation</abstract>
+         <oldabstract>navigation</oldabstract>
       </destination>
    </route>
    <route>
@@ -2091,11 +2240,13 @@
          <id>reference</id>
          <annotation>riser</annotation>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>navigation</id>
          <annotation/>
          <abstract>navigation</abstract>
+         <oldabstract>navigation</oldabstract>
       </destination>
    </route>
    <route>
@@ -2104,11 +2255,13 @@
          <id>reference</id>
          <annotation>key</annotation>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>navigation</id>
          <annotation/>
          <abstract>navigation</abstract>
+         <oldabstract>navigation</oldabstract>
       </destination>
    </route>
    <route>
@@ -2117,11 +2270,13 @@
          <id>reference</id>
          <annotation/>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>projection</id>
          <annotation/>
          <abstract>righthand_children</abstract>
+         <oldabstract>righthand_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2130,11 +2285,13 @@
          <id>constructed_relationship</id>
          <annotation/>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>navigation</id>
          <annotation/>
          <abstract>navigation</abstract>
+         <oldabstract>navigation</oldabstract>
       </destination>
    </route>
    <route>
@@ -2143,11 +2300,13 @@
          <id>composition</id>
          <annotation/>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>transient</id>
          <annotation/>
          <abstract>composition_children</abstract>
+         <oldabstract>composition_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2156,11 +2315,13 @@
          <id>composition</id>
          <annotation/>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>initialiser</id>
          <annotation>..</annotation>
          <abstract>composition_children</abstract>
+         <oldabstract>composition_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2169,11 +2330,13 @@
          <id>Relationship</id>
          <annotation>diagram</annotation>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>path</id>
          <annotation/>
          <abstract>path</abstract>
+         <oldabstract>path</oldabstract>
       </destination>
    </route>
    <route>
@@ -2182,11 +2345,13 @@
          <id>Relationship</id>
          <annotation/>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>sequence</id>
          <annotation/>
          <abstract>sequence</abstract>
+         <oldabstract>sequence</oldabstract>
       </destination>
    </route>
    <route>
@@ -2195,11 +2360,13 @@
          <id>Relationship</id>
          <annotation/>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>identifying(1)</id>
          <annotation/>
          <abstract>righthand_children</abstract>
+         <oldabstract>righthand_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2208,11 +2375,13 @@
          <id>Relationship</id>
          <annotation>cardinality</annotation>
          <abstract>Relationship</abstract>
+         <oldabstract>Relationship</oldabstract>
       </source>
       <destination>
          <id>cardinality</id>
          <annotation/>
          <abstract>righthand_children</abstract>
+         <oldabstract>righthand_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2221,11 +2390,13 @@
          <id>path</id>
          <annotation/>
          <abstract>path</abstract>
+         <oldabstract>path</oldabstract>
       </source>
       <destination>
          <id>label</id>
          <annotation/>
          <abstract>path_children</abstract>
+         <oldabstract>path_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2234,11 +2405,13 @@
          <id>path</id>
          <annotation>inverse</annotation>
          <abstract>path</abstract>
+         <oldabstract>path</oldabstract>
       </source>
       <destination>
          <id>label</id>
          <annotation/>
          <abstract>path_children</abstract>
+         <oldabstract>path_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2247,11 +2420,13 @@
          <id>path</id>
          <annotation>id</annotation>
          <abstract>path</abstract>
+         <oldabstract>path</oldabstract>
       </source>
       <destination>
          <id>label</id>
          <annotation/>
          <abstract>path_children</abstract>
+         <oldabstract>path_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2260,11 +2435,13 @@
          <id>path</id>
          <annotation>scope</annotation>
          <abstract>path</abstract>
+         <oldabstract>path</oldabstract>
       </source>
       <destination>
          <id>label</id>
          <annotation/>
          <abstract>path_children</abstract>
+         <oldabstract>path_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2273,11 +2450,13 @@
          <id>path</id>
          <annotation>align</annotation>
          <abstract>path</abstract>
+         <oldabstract>path</oldabstract>
       </source>
       <destination>
          <id>src_or_dest</id>
          <annotation/>
          <abstract>path_children</abstract>
+         <oldabstract>path_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2286,11 +2465,13 @@
          <id>path</id>
          <annotation/>
          <abstract>path</abstract>
+         <oldabstract>path</oldabstract>
       </source>
       <destination>
          <id>step</id>
          <annotation/>
          <abstract>path_children</abstract>
+         <oldabstract>path_children</oldabstract>
       </destination>
    </route>
    <route>
@@ -2298,12 +2479,14 @@
       <source>
          <id>identifying(1)</id>
          <annotation/>
-         <abstract>identifying(1)</abstract>
+         <abstract>righthand_children</abstract>
+         <oldabstract>identifying(1)</oldabstract>
       </source>
       <destination>
          <id>inherited</id>
          <annotation/>
-         <abstract>inherited</abstract>
+         <abstract>righthand_children</abstract>
+         <oldabstract>inherited</oldabstract>
       </destination>
    </route>
    <route>
@@ -2312,11 +2495,13 @@
          <id>copy</id>
          <annotation>riser2</annotation>
          <abstract>composition_children</abstract>
+         <oldabstract>composition_children</oldabstract>
       </source>
       <destination>
          <id>navigation</id>
          <annotation/>
          <abstract>navigation</abstract>
+         <oldabstract>navigation</oldabstract>
       </destination>
    </route>
    <route>
@@ -2325,11 +2510,13 @@
          <id>initialiser</id>
          <annotation>along</annotation>
          <abstract>composition_children</abstract>
+         <oldabstract>composition_children</oldabstract>
       </source>
       <destination>
          <id>navigation</id>
          <annotation/>
          <abstract>navigation</abstract>
+         <oldabstract>navigation</oldabstract>
       </destination>
    </route>
    <route>
@@ -2337,12 +2524,14 @@
       <source>
          <id>complex</id>
          <annotation/>
-         <abstract>complex</abstract>
+         <abstract>navigation</abstract>
+         <oldabstract>complex</oldabstract>
       </source>
       <destination>
          <id>component</id>
          <annotation/>
-         <abstract>component</abstract>
+         <abstract>navigation</abstract>
+         <oldabstract>component</oldabstract>
       </destination>
    </route>
    <route>
@@ -2351,11 +2540,13 @@
          <id>label</id>
          <annotation>name</annotation>
          <abstract>path_children</abstract>
+         <oldabstract>path_children</oldabstract>
       </source>
       <destination>
          <id>render</id>
          <annotation/>
          <abstract>path_grandchildren</abstract>
+         <oldabstract>path_grandchildren</oldabstract>
       </destination>
    </route>
    <route>
@@ -2364,24 +2555,13 @@
          <id>label</id>
          <annotation>position</annotation>
          <abstract>path_children</abstract>
+         <oldabstract>path_children</oldabstract>
       </source>
       <destination>
          <id>relative_position</id>
          <annotation/>
          <abstract>path_grandchildren</abstract>
-      </destination>
-   </route>
-   <route>
-      <top_down/>
-      <source>
-         <id>step</id>
-         <annotation/>
-         <abstract/>
-      </source>
-      <destination>
-         <id>step</id>
-         <annotation/>
-         <abstract/>
+         <oldabstract>path_grandchildren</oldabstract>
       </destination>
    </route>
    <route>
@@ -2390,11 +2570,28 @@
          <id>step</id>
          <annotation/>
          <abstract>path_children</abstract>
+         <oldabstract/>
+      </source>
+      <destination>
+         <id>step</id>
+         <annotation/>
+         <abstract>path_children</abstract>
+         <oldabstract/>
+      </destination>
+   </route>
+   <route>
+      <top_down/>
+      <source>
+         <id>step</id>
+         <annotation/>
+         <abstract>path_children</abstract>
+         <oldabstract>path_children</oldabstract>
       </source>
       <destination>
          <id>dimension</id>
          <annotation/>
          <abstract>path_grandchildren</abstract>
+         <oldabstract>path_grandchildren</oldabstract>
       </destination>
    </route>
 </diagram:diagram>

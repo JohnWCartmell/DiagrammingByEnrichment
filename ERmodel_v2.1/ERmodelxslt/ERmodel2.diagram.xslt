@@ -25,14 +25,21 @@ CHANGE HISTORY
 		xmlns="http://www.entitymodelling.org/diagram"
 		>
 
+	<xsl:param name="maxiter" />
+  <xsl:variable name="maxdepth" as="xs:integer" select="if ($maxiter) then $maxiter else 100" />
+
+  <xsl:param name="debug" />
+ <xsl:variable name="debugon" as="xs:boolean" select="$debug='y'" />
+
 	<xsl:include href="passone.xslt"/>
+
+	<xsl:include href="recursive_structure_enrichment.xslt"/>
 
 	<xsl:include href="passtwo.xslt"/>
 
 	<xsl:output method="xml" indent="yes" />
 
 	<xsl:template name="main" match="entity_model">
-
 		<xsl:variable name="state">
 			<diagram:diagram>
 				<xsl:namespace name=""  select="'http://www.entitymodelling.org/diagram'"/>
@@ -61,16 +68,26 @@ CHANGE HISTORY
 			</diagram:diagram>	
 		</xsl:variable>
 
-
 		<xsl:variable name="state">
 			<xsl:for-each select="$state/*">
+				<xsl:message>initiating passone from <xsl:value-of select="name()"/></xsl:message>
 				<xsl:copy>
 					<xsl:apply-templates mode="passone"/>
 				</xsl:copy>
 			</xsl:for-each>
 		</xsl:variable>	
+
+    <xsl:message>Max depth is <xsl:value-of select="$maxdepth"/> </xsl:message>
+    <xsl:variable name="state">
+      <xsl:call-template name="recursive_structure_enrichment">
+         <xsl:with-param name="interim" select="$state/*"/>  
+         <xsl:with-param name="depth" select="0"/>  
+      </xsl:call-template>
+    </xsl:variable>
+
 		<xsl:variable name="state">
 			<xsl:for-each select="$state/*">
+				<xsl:message>initiating passtwo</xsl:message>
 				<xsl:copy>
 					<xsl:apply-templates mode="passtwo"/>
 				</xsl:copy>
@@ -78,6 +95,7 @@ CHANGE HISTORY
 		</xsl:variable>	
 		<xsl:variable name="state">
 			<xsl:for-each select="$state/*">
+				<xsl:message>initiating passthree</xsl:message>
 				<xsl:copy>
 					<xsl:apply-templates mode="passthree"/>
 				</xsl:copy>
@@ -85,6 +103,7 @@ CHANGE HISTORY
 		</xsl:variable>	
 		<xsl:for-each select="$state/*">
 			<xsl:copy>
+				<xsl:message>initiating passfour</xsl:message>
 				<xsl:apply-templates mode="passfour"/>
 			</xsl:copy>
 		</xsl:for-each>
