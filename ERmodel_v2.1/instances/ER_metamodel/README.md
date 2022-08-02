@@ -22,7 +22,8 @@ changing source line xmlns="" to xmlns="http://www.entitymodelling.org/diagram".
 TO DO     -- simplify the example by removing the v1 diagramming stuff.
           -- have output file produced in some other folder.
           -- document what the transform does (this will be in the source folder you'd guess.
-		  -- try figure out the two options I experimented with which were at two extremes and experiment                  with a middle way between extremes.
+		  -- try figure out the two options I experimented with which were at two extremes and experiment
+                            with a middle way between extremes.
 		  -- figure a small additional smart that can be incremental
 
 
