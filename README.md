@@ -36,8 +36,17 @@ Contains a rudimentary xslt transformations for
   * I am considering pausing this development so that I can progress the pure entity logic idea and re-source this work using entity logic.
 ### Way forward
 Have a separate EntityLogic repository
-Create this by extracting diagram free parts of ERmodel v1.2.
-For a time the metamodel of ER logic will be described as an instance of ERmodel v1.2. One advantage of this is so that I can have a diagram of this metamodel. 
+* Create this by extracting diagram free parts of ERmodel v1.4.
+* For a time the metamodel of ER logic will be described as an instance of ERmodel v1.4. One advantage of this is so that I can have a diagram of this metamodel. 
+
+#### The ERmodel v1.4 meta model
+* includes attributes such as xpath_evaluate which are 'filled in' by xslt as part of a build process. Such attributes as these are derived attributes but is not possible to described such attributes in the model. Would like to extend the model to describe such derived attributes.
+* already includes derived (constructed) relationships and supports use of constructed relationships in xpath by way of such as the (derived) attribute xpath_evaluate.
+* *not check* what assumption such as xpath_evaluate has -- can this derived xpath code be used from xslt? Assume for now it can.
+* question: how much work would it be to bootstrap xpath evaluate.
+* question: if we do a bootstrap of xpath-evaluate how much freedom do we have in how we use it are we
+  * limited to a static enrichment of a model by its derived features, or are we
+  * able to include the derivation of attributes and relatuionships in much more comprehensive transformations such as the gemneration of code or of diagrams.  
 
 
 
