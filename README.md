@@ -44,7 +44,7 @@ Have a separate EntityLogic repository
 * already includes derived (constructed) relationships and supports use of constructed relationships in xpath by way of such as the (derived) attribute xpath_evaluate.
 * *now check* what assumption such as xpath_evaluate has 
   * assumes existence of keys for entity types (including abstract entity types one would think) 
-    * assumes, therefore, use from xslt  
+     assumes, therefore, use from xslt  
 * question: how much work would it be to bootstrap xpath evaluate.
 * question: if we do a bootstrap of xpath-evaluate how much freedom do we have in how we use it are we
   * limited to a static enrichment of a model by its derived features, or are we
