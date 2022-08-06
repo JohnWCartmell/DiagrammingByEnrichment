@@ -12,6 +12,9 @@ Stored on Github 17 August 2021 (Moved from BitBucket.)
 	* support user to improve automated presentation
 * source xslt transforms as rules represented in xml described by rules entity model
 * factor transform logic so that all that can be represented as derivation of entities, relationships and attributes is represented as derivation of entities, relationships and attributes
+  * an example of a derived entity would be a foreign key attribute such as currently created in the ERmodel2.physical_enrichment.module.xslt
+  * this may be difficult to describe within entity logic 
+   * though maybe it can be constructed by pullback which would be quite something wouldn't it?
 * support user diagramming using browser-side xslt
 	* use incremental retransformation to mimimise computation
 
