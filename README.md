@@ -47,7 +47,7 @@ Have a separate EntityLogic repository
 * question: if we do a bootstrap of xpath-evaluate how much freedom do we have in how we use it are we
   * limited to a static enrichment of a model by its derived features, or are we
   * able to include the derivation of attributes and relatuionships in much more comprehensive transformations such as the gemneration of code or of diagrams.  
-* we should try and enable 2. for this will not rule out 1. and 1. maybe good for debugging and for documentation.
+* we should try and enable 2. for this will not rule out 1. which maybe useful for debugging and for documentation.
 
 
 
