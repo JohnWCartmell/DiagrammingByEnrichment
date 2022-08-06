@@ -25,15 +25,15 @@ Contains a model of the current model of diagrams as an instance of ERmodelv1.2
 
 #### Folder ERmodel_v2.1 
 Contains xslt transformations for
-    *completion of an instance of the diagram model
-         *in future this xslt will be re-sourced in pure entity logic
-    *rendering of a complete instance of a diagram model in svg 
+* completion of an instance of the diagram model
+  * in future this xslt will be re-sourced in pure entity logic
+* rendering of a complete instance of a diagram model in svg 
 
 #### SubFolder  ERmodel_v2.1/ERmodelxslt
 Contains a rudimentary xslt transformations for
-	* autogeneration of an instance of the diagram model from a diagram-free entity model
-		** as at now in August 2022 the input entity model is required to be an instance of ERmodelv1.2 (it is not required to have any diagramming information -- if it has then it should be ignored )
-		** I am considering pausing this development so that I can progress the pure entity logic idea and re-source this work using entity logic.
+* autogeneration of an instance of the diagram model from a diagram-free entity model
+  * as at now in August 2022 the input entity model is required to be an instance of ERmodelv1.2 (it is not required to have any diagramming information -- if it has then it should be ignored )
+  * I am considering pausing this development so that I can progress the pure entity logic idea and re-source this work using entity logic.
 ### Way forward
 Have a separate EntityLogic repository
 Create this by extracting diagram free parts of ERmodel v1.2.
