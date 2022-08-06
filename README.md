@@ -42,7 +42,7 @@ Have a separate EntityLogic repository
 #### The ERmodel v1.4 meta model
 * includes attributes such as xpath_evaluate which are 'filled in' by xslt as part of a build process. Such attributes as these are derived attributes but is not possible to described such attributes in the model. Would like to extend the model to describe such derived attributes.
 * already includes derived (constructed) relationships and supports use of constructed relationships in xpath by way of such as the (derived) attribute xpath_evaluate.
-* *now check* what assumption such as xpath_evaluate has 
+* *xpath_evaluate*  
   * assumes existence of keys for entity types (including abstract entity types one would think) 
    * assumes, therefore, use from xslt  
 * question: how much work would it be to bootstrap xpath evaluate.
