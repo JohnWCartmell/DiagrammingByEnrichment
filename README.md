@@ -53,6 +53,7 @@ Have a separate EntityLogic repository
   * limited to a static enrichment of a model by its derived features, or are we
   * able to include the derivation of attributes and relatuionships in much more comprehensive transformations such as the gemneration of code or of diagrams.  
 * we should try and enable 2. for this will not rule out 1. which maybe useful for debugging and for documentation.
+* use of the xpath 3.0 xsl:evaluate will ease the number of xslt passes required in the support of derived attributes which have values defined by xpath expressions rather than fine grain model. Example  attribute 'elementName' which is constructed by the ERmodel2.physical transformation in file ERmodel2.initial_enrichment_module.xslt  
 
 
 
