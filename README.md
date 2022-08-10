@@ -22,8 +22,6 @@ a small number of diagramming directives to the source xml to refine the layout 
 
 # Folder diagramModelasERv1.4
 Contains the current model of diagrams as an instance of ERmodelv1.4.
-See [diagrammatic representation of the diagram model](diagramModelasERv_1.4/docs/diagramERmodel.hierarchical.svg).
-
 
 #### Folder ERmodel_v2.1 
 Contains xslt transformations for
