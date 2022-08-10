@@ -1,6 +1,6 @@
 # README #
 
-An xml-based diagrammming system[^1]. 
+An xml-based diagramming system[^1]. 
 
 ## Concept
 Diagrams may be described in xml and generated into one or both of svg, for use on the web, or latex for inclusion in pdf documents. 
