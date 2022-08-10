@@ -14,15 +14,24 @@ a small number of diagramming directives to the source xml to refine the layout 
  
 ![introduction](images/x.dimensions.trimmed.svg)
 
-# Source
-## Folder diagramModelasERv1.4
+## Source
+### Folder diagramModelasERv1.4
 Contains the current model of diagrams as an instance of ERmodelv1.4.
 
-## Folder diagramenrichment
+### Folder diagramenrichment
 Contains xslt transformations for
 * completion of an instance of the diagram model
   * in future this xslt will be re-sourced in pure entity logic
 * rendering of a complete instance of a diagram model in svg 
+
+
+## Outstanding
+1. Support for end arrows and crowsfeet.
+2. Support for conduits.
+3. Re-engineer existing enrichment rules in xslt rules back into EntityLogic derived structure, relationships and attributes.
+   * generate priorities on xslt templates so as to get rid of duplicate rule warnings
+   * generate identity atributes on xslt templates 
+   * generate traceability attributes into generated structure.
 
 [^1]: Moved from BitBucket to GitHub 17 August 2021 
 [^2]: This is so as to minimise recomputation in response to edits made by the user. This technique is one found in incremental attribute grammars used in syntax directed editing systems. 
