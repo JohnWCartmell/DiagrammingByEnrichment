@@ -1,5 +1,8 @@
 # README #
 
+
+
+
 An xml-based diagrammming system[^1]. 
 
 ## Concept
@@ -14,6 +17,8 @@ a small number of diagramming directives to the source xml to refine the layout 
  
 # State of play - 6th August 2022
 * Diagrams may represented as instances of a diagram entity model written in ERScript v1.?. 
+
+![introduction](images/x.dimensions.svg)
 
 # Folder diagramModelasERv1.2
 Contains a model of the current model of diagrams as an instance of ERmodelv?.
