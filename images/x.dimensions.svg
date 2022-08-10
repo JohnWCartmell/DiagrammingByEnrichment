@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg:svg xmlns:fn="http://www.w3.org/2005/xpath-functions"
+         xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:xlink="http://www.w3.org/TR/xlink"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         width="21.5cm"
+         height="28.1cm">
+   <svg:defs>
+      <svg:linearGradient id="topdowngrey" x1="0%" y1="0%" x2="0%" y2="100%">
+         <svg:stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:1"/>
+         <svg:stop offset="100%" style="stop-color:white;stop-opacity:1"/>
+      </svg:linearGradient>
+      <svg:style type="text/css">
+  .title{
+    fill: black;
+    font-size: 20px;
+    text-decoration: underline;
+    font-style: normal;
+    font-weight: bold
+  }
+
+  .normal{
+    fill: black;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: normal
+  }
+
+  .italic{
+    fill: black;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: normal
+  }
+
+  .bold{
+    fill: black;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: bold
+  }
+
+  .margin{;
+    fill: #FF44FF;
+    stroke: black;
+    stroke-width: 0.02;
+    stroke-dasharray: .025 .025;
+    fill-opacity: 0.3;
+    fill-rule: evenodd
+  }
+
+  .padding{;
+    fill: #FFFF00;
+    stroke: black;
+    stroke-width: 0.02;
+    stroke-dasharray: .025 .025;
+    fill-opacity: 0.3;
+    fill-rule:  evenodd
+  }
+
+  .outer{;
+    fill: #0066FF;
+    stroke: black;
+    stroke-width: 0.02;
+    stroke-dasharray: .025 .025;
+    fill-opacity: 0.3;
+    fill-rule: evenodd
+  }
+
+  .outlinedebug{;
+    stroke: black;
+    stroke-width: 0.04;
+    fill-opacity: 0
+  }
+
+  .route{;
+    stroke: blue;
+    stroke-width: 0.04;
+    fill-opacity: 0
+  }
+
+  .eteven{;
+    fill: #FFFFCC;
+    stroke: black;
+    stroke-width: 1
+  }
+
+  .etodd{;
+    fill: white;
+    stroke: black;
+    stroke-width: 1
+  }
+
+  .point{;
+    stroke: red;
+    stroke-width: 1
+  }
+
+  .outline{;
+    stroke: black;
+    stroke-width: 1;
+    fill-opacity: 0
+  }
+
+  .tickmarks{;
+    stroke: black;
+    stroke-width: 1;
+    fill-opacity: 0
+  }
+
+  .offwhite{;
+    fill: #FCFCFC;
+    stroke: black;
+    stroke-width: 1
+  }
+
+  .gradient{;
+    fill: url(#topdowngrey)
+  }
+
+  .grey{;
+    fill: grey
+  }
+
+  .invisible{;
+    stroke: none;
+    fill-opacity: 0
+  }
+</svg:style>
+   </svg:defs>
+   <svg:g id="">
+      <svg:rect class="gradient"
+                x="1.0cm"
+                y="2.0cm"
+                rx="cm"
+                ry="cm"
+                width="20cm"
+                height="6cm"/>
+      <svg:g id="">
+         <svg:rect class="outline"
+                   x="13cm"
+                   y="3cm"
+                   rx="cm"
+                   ry="cm"
+                   width="6cm"
+                   height="3cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13.1cm"
+                   x2="13.1cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13.2cm"
+                   x2="13.2cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13.3cm"
+                   x2="13.3cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13.4cm"
+                   x2="13.4cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13.5cm"
+                   x2="13.5cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13.6cm"
+                   x2="13.6cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13.7cm"
+                   x2="13.7cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13.8cm"
+                   x2="13.8cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13.9cm"
+                   x2="13.9cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14cm"
+                   x2="14cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14.1cm"
+                   x2="14.1cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14.2cm"
+                   x2="14.2cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14.3cm"
+                   x2="14.3cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14.4cm"
+                   x2="14.4cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14.5cm"
+                   x2="14.5cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14.6cm"
+                   x2="14.6cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14.7cm"
+                   x2="14.7cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14.8cm"
+                   x2="14.8cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="14.9cm"
+                   x2="14.9cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15cm"
+                   x2="15cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15.1cm"
+                   x2="15.1cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15.2cm"
+                   x2="15.2cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15.3cm"
+                   x2="15.3cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15.4cm"
+                   x2="15.4cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15.5cm"
+                   x2="15.5cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15.6cm"
+                   x2="15.6cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15.7cm"
+                   x2="15.7cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15.8cm"
+                   x2="15.8cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="15.9cm"
+                   x2="15.9cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16cm"
+                   x2="16cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16.1cm"
+                   x2="16.1cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16.2cm"
+                   x2="16.2cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16.3cm"
+                   x2="16.3cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16.4cm"
+                   x2="16.4cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16.5cm"
+                   x2="16.5cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16.6cm"
+                   x2="16.6cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16.7cm"
+                   x2="16.7cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16.8cm"
+                   x2="16.8cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="16.9cm"
+                   x2="16.9cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17cm"
+                   x2="17cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17.1cm"
+                   x2="17.1cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17.2cm"
+                   x2="17.2cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17.3cm"
+                   x2="17.3cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17.4cm"
+                   x2="17.4cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17.5cm"
+                   x2="17.5cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17.6cm"
+                   x2="17.6cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17.7cm"
+                   x2="17.7cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17.8cm"
+                   x2="17.8cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="17.9cm"
+                   x2="17.9cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18cm"
+                   x2="18cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18.1cm"
+                   x2="18.1cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18.2cm"
+                   x2="18.2cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18.3cm"
+                   x2="18.3cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18.4cm"
+                   x2="18.4cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18.5cm"
+                   x2="18.5cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18.6cm"
+                   x2="18.6cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18.7cm"
+                   x2="18.7cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18.8cm"
+                   x2="18.8cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="18.9cm"
+                   x2="18.9cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="19cm"
+                   x2="19cm"
+                   y1="3cm"
+                   y2="3.066666666666667cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13cm"
+                   y1="3cm"
+                   y2="3.1333333333333333cm"/>
+         <svg:line class="tickmarks"
+                   x1="14cm"
+                   x2="14cm"
+                   y1="3cm"
+                   y2="3.1333333333333333cm"/>
+         <svg:line class="tickmarks"
+                   x1="15cm"
+                   x2="15cm"
+                   y1="3cm"
+                   y2="3.1333333333333333cm"/>
+         <svg:line class="tickmarks"
+                   x1="16cm"
+                   x2="16cm"
+                   y1="3cm"
+                   y2="3.1333333333333333cm"/>
+         <svg:line class="tickmarks"
+                   x1="17cm"
+                   x2="17cm"
+                   y1="3cm"
+                   y2="3.1333333333333333cm"/>
+         <svg:line class="tickmarks"
+                   x1="18cm"
+                   x2="18cm"
+                   y1="3cm"
+                   y2="3.1333333333333333cm"/>
+         <svg:line class="tickmarks"
+                   x1="19cm"
+                   x2="19cm"
+                   y1="3cm"
+                   y2="3.1333333333333333cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3cm"
+                   y2="3cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3.1cm"
+                   y2="3.1cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3.2cm"
+                   y2="3.2cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3.3cm"
+                   y2="3.3cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3.4cm"
+                   y2="3.4cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3.5cm"
+                   y2="3.5cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3.6cm"
+                   y2="3.6cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3.7cm"
+                   y2="3.7cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3.8cm"
+                   y2="3.8cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="3.9cm"
+                   y2="3.9cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4cm"
+                   y2="4cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4.1cm"
+                   y2="4.1cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4.2cm"
+                   y2="4.2cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4.3cm"
+                   y2="4.3cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4.4cm"
+                   y2="4.4cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4.5cm"
+                   y2="4.5cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4.6cm"
+                   y2="4.6cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4.7cm"
+                   y2="4.7cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4.8cm"
+                   y2="4.8cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="4.9cm"
+                   y2="4.9cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5cm"
+                   y2="5cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5.1cm"
+                   y2="5.1cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5.2cm"
+                   y2="5.2cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5.3cm"
+                   y2="5.3cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5.4cm"
+                   y2="5.4cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5.5cm"
+                   y2="5.5cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5.6cm"
+                   y2="5.6cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5.7cm"
+                   y2="5.7cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5.8cm"
+                   y2="5.8cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="5.9cm"
+                   y2="5.9cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.066666666666666cm"
+                   y1="6cm"
+                   y2="6cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.133333333333333cm"
+                   y1="3cm"
+                   y2="3cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.133333333333333cm"
+                   y1="4cm"
+                   y2="4cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.133333333333333cm"
+                   y1="5cm"
+                   y2="5cm"/>
+         <svg:line class="tickmarks"
+                   x1="13cm"
+                   x2="13.133333333333333cm"
+                   y1="6cm"
+                   y2="6cm"/>
+         <svg:g id="">
+            <svg:rect class="outline"
+                      x="15cm"
+                      y="4cm"
+                      rx="cm"
+                      ry="cm"
+                      width="2cm"
+                      height="1.0cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15.1cm"
+                      x2="15.1cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15.2cm"
+                      x2="15.2cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15.3cm"
+                      x2="15.3cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15.4cm"
+                      x2="15.4cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15.5cm"
+                      x2="15.5cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15.6cm"
+                      x2="15.6cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15.7cm"
+                      x2="15.7cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15.8cm"
+                      x2="15.8cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15.9cm"
+                      x2="15.9cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16cm"
+                      x2="16cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16.1cm"
+                      x2="16.1cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16.2cm"
+                      x2="16.2cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16.3cm"
+                      x2="16.3cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16.4cm"
+                      x2="16.4cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16.5cm"
+                      x2="16.5cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16.6cm"
+                      x2="16.6cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16.7cm"
+                      x2="16.7cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16.8cm"
+                      x2="16.8cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="16.9cm"
+                      x2="16.9cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="17cm"
+                      x2="17cm"
+                      y1="4cm"
+                      y2="4.066666666666666cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15cm"
+                      y1="4cm"
+                      y2="4.133333333333334cm"/>
+            <svg:line class="tickmarks"
+                      x1="16cm"
+                      x2="16cm"
+                      y1="4cm"
+                      y2="4.133333333333334cm"/>
+            <svg:line class="tickmarks"
+                      x1="17cm"
+                      x2="17cm"
+                      y1="4cm"
+                      y2="4.133333333333334cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4cm"
+                      y2="4cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4.1cm"
+                      y2="4.1cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4.2cm"
+                      y2="4.2cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4.3cm"
+                      y2="4.3cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4.4cm"
+                      y2="4.4cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4.5cm"
+                      y2="4.5cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4.6cm"
+                      y2="4.6cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4.7cm"
+                      y2="4.7cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4.8cm"
+                      y2="4.8cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="4.9cm"
+                      y2="4.9cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.066666666666666cm"
+                      y1="5cm"
+                      y2="5cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.133333333333333cm"
+                      y1="4cm"
+                      y2="4cm"/>
+            <svg:line class="tickmarks"
+                      x1="15cm"
+                      x2="15.133333333333333cm"
+                      y1="5cm"
+                      y2="5cm"/>
+         </svg:g>
+      </svg:g>
+   </svg:g>
+   <svg:text class="title"
+             x="1.0cm"
+             y="1.0cm"
+             text-anchor="start"
+             dominant-baseline="hanging">Enclosure layouts</svg:text>
+   <svg:text class="normal"
+             x="1.5cm"
+             y="3cm"
+             text-anchor="start"
+             dominant-baseline="hanging">Two enclosures are shown here as bolded boxes. Each contains a margin shown here in pink. </svg:text>
+   <svg:text class="normal"
+             x="1.5cm"
+             y="3.3cm"
+             text-anchor="start"
+             dominant-baseline="hanging">Inner content is to be placed within the margins.</svg:text>
+   <svg:text class="normal"
+             x="1.5cm"
+             y="3.6cm"
+             text-anchor="start"
+             dominant-baseline="hanging">The nested enclosure has position specified by:</svg:text>
+   <svg:text class="normal"
+             x="3cm"
+             y="3.9cm"
+             text-anchor="start"
+             dominant-baseline="hanging">
+           &lt;x&gt;&lt;relative&gt;&lt;offset&gt;1.0&lt;/offset&gt;&lt;/relative&gt;&lt;/x&gt;
+    </svg:text>
+   <svg:text class="normal"
+             x="3cm"
+             y="4.2cm"
+             text-anchor="start"
+             dominant-baseline="hanging">
+           &lt;y&gt;&lt;relative&gt;&lt;offset&gt;1.0&lt;/offset&gt;&lt;/relative&gt;&lt;/y&gt;
+    </svg:text>
+   <svg:text class="normal"
+             x="1.5cm"
+             y="4.5cm"
+             text-anchor="start"
+             dominant-baseline="hanging">to position it at offset 1 to the  containing enclosure and width w=2.</svg:text>
+   <svg:text class="normal"
+             x="1.5cm"
+             y="4.8cm"
+             text-anchor="start"
+             dominant-baseline="hanging">Enclosures also define an outer area to hold content like link attachments and their labels. </svg:text>
+   <svg:text class="normal"
+             x="1.5cm"
+             y="5.1cm"
+             text-anchor="start"
+             dominant-baseline="hanging">The outer area is defined by attributes wl wr ht and hb.</svg:text>
+   <svg:text class="normal"
+             x="1.5cm"
+             y="5.4cm"
+             text-anchor="start"
+             dominant-baseline="hanging">Outer content has padding shown here in yellow. </svg:text>
+   <svg:text class="normal"
+             x="1.5cm"
+             y="5.7cm"
+             text-anchor="start"
+             dominant-baseline="hanging">The nested enclosure here has padding=0.1, margin=0.2, wl=0.9, wr=0.9</svg:text>
+   <svg:text class="normal"
+             x="1.5cm"
+             y="6cm"
+             text-anchor="start"
+             dominant-baseline="hanging">Overall x extent of box = 2 * padding + wl + w + wr = 4</svg:text>
+   <svg:svg width="21.4cm" height="28cm" viewBox="0 0 21.4 28">
+      <svg:path class="outlinedebug" d="M13,3 L19,3 L19,6 L13,6 L13,3"/>
+      <svg:path class="margin"
+                d="M13,3 L19,3 L19,6 L13,6 L13,3 M13.2,3.2 L18.8,3.2 L18.8,5.8 L13.2,5.8 L13.2,3.2"/>
+      <svg:path class="padding"
+                d=" M13,3 L19,3 L19,6 L13,6 L13,3 M13,3 L19,3 L19,6 L13,6 L13,3"/>
+      <svg:path class="outlinedebug" d="M15,4 L17,4 L17,5 L15,5 L15,4"/>
+      <svg:path class="margin"
+                d="M15,4 L17,4 L17,5 L15,5 L15,4 M15.2,4.2 L16.8,4.2 L16.8,4.8 L15.2,4.8 L15.2,4.2"/>
+      <svg:path class="padding"
+                d=" M14.1,3.8 L17.9,3.8 L17.9,5.2 L14.1,5.2 L14.1,3.8 M14,3.6999999999999997 L18,3.6999999999999997 L18,5.3 L14,5.3 L14,3.6999999999999997"/>
+   </svg:svg>
+</svg:svg>
