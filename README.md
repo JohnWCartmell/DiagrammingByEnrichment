@@ -22,7 +22,7 @@ a small number of diagramming directives to the source xml to refine the layout 
 
 # Folder diagramModelasERv1.4
 Contains the current model of diagrams as an instance of ERmodelv1.4.
-See [diagrammatic representation of the diagram model](diagramModelasERv_1.4/docs/diagramERmodel.hierarchical.svg.)
+See [diagrammatic representation of the diagram model](diagramModelasERv_1.4/docs/diagramERmodel.hierarchical.svg).
 
 
 #### Folder ERmodel_v2.1 
@@ -32,5 +32,5 @@ Contains xslt transformations for
 * rendering of a complete instance of a diagram model in svg 
 
 
-[^1] Moved from BitBucket to GitHub 17 August 2021 
+[^1]: Moved from BitBucket to GitHub 17 August 2021 
 [^2]: This is so as to minimise recomputation in response to edits made by the user. This technique is one found in incremental attribute grammars used in syntax directed editing systems. 
