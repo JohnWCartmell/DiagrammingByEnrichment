@@ -1,0 +1,2498 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+   <start>
+      <ref name="diagram"/>
+   </start>
+   <define name="diagram">
+      <element>
+         <name>diagram</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>h</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>w</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>margin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>depth</name>
+                  <data type="integer"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <oneOrMore>
+                  <ref name="box"/>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <oneOrMore>
+                  <ref name="route"/>
+               </oneOrMore>
+            </optional>
+            <ref name="default"/>
+            <optional>
+               <oneOrMore>
+                  <ref name="shape_style"/>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <oneOrMore>
+                  <ref name="endline_style"/>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <oneOrMore>
+                  <ref name="text_style"/>
+               </oneOrMore>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="box">
+      <choice>
+         <ref name="path"/>
+         <ref name="label_1"/>
+         <ref name="point_or_line"/>
+         <ref name="enclosure"/>
+      </choice>
+   </define>
+   <define name="path">
+      <element>
+         <name>path</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>id</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>h</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>w</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>margin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>padding</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>depth</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="x"/>
+            </optional>
+            <optional>
+               <ref name="y"/>
+            </optional>
+            <optional>
+               <ref name="default"/>
+            </optional>
+            <optional>
+               <oneOrMore>
+                  <ref name="point_or_line"/>
+               </oneOrMore>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="label_1">
+      <element>
+         <name>label</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>id</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>h</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>w</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>margin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>padding</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>depth</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>text_style</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <element>
+               <name>text</name>
+               <data type="string"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <element>
+               <name>offset2</name>
+               <data type="float"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <optional>
+               <ref name="x"/>
+            </optional>
+            <optional>
+               <ref name="y"/>
+            </optional>
+            <optional>
+               <ref name="default"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="point_or_line">
+      <choice>
+         <ref name="point"/>
+         <ref name="cardinal"/>
+      </choice>
+   </define>
+   <define name="point">
+      <element>
+         <name>point</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>id</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>h</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>w</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>margin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>padding</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>depth</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="x"/>
+            </optional>
+            <optional>
+               <ref name="y"/>
+            </optional>
+            <optional>
+               <ref name="default"/>
+            </optional>
+            <optional>
+               <oneOrMore>
+                  <ref name="path"/>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <oneOrMore>
+                  <ref name="label_1"/>
+               </oneOrMore>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="cardinal">
+      <choice>
+         <ref name="ns"/>
+         <ref name="ew"/>
+         <ref name="ramp"/>
+      </choice>
+   </define>
+   <define name="ns">
+      <element>
+         <name>ns</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>id</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>h</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>w</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>margin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>padding</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>depth</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>starty</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>midy</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>endy</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="x"/>
+            </optional>
+            <optional>
+               <ref name="y"/>
+            </optional>
+            <optional>
+               <ref name="default"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="ew">
+      <element>
+         <name>ew</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>id</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>h</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>w</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>margin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>padding</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>depth</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>startx</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>midx</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>endx</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="x"/>
+            </optional>
+            <optional>
+               <ref name="y"/>
+            </optional>
+            <optional>
+               <ref name="default"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="ramp">
+      <element>
+         <name>ramp</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>id</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>h</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>w</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>margin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>padding</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>depth</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>degrees</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>deltax</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>startx</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>midx</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>endx</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>deltay</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>starty</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>midy</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>endy</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="x"/>
+            </optional>
+            <optional>
+               <ref name="y"/>
+            </optional>
+            <optional>
+               <ref name="default"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="enclosure">
+      <element>
+         <name>enclosure</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>id</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>h</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>w</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>margin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>padding</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>depth</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>shape_style</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>ht</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>hb</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>wl</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>wr</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>debug-whitespace</name>
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="x"/>
+            </optional>
+            <optional>
+               <ref name="y"/>
+            </optional>
+            <optional>
+               <ref name="default"/>
+            </optional>
+            <optional>
+               <oneOrMore>
+                  <ref name="box"/>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <oneOrMore>
+                  <ref name="route"/>
+               </oneOrMore>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="route">
+      <element>
+         <name>route</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <element>
+               <name>id</name>
+               <data type="string"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <optional>
+               <element>
+                  <name>label</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>align</name>
+                  <choice>
+                     <value>
+			      ToSrc
+			
+		    </value>
+                     <value>
+			      ToDest
+			
+		    </value>
+                  </choice>
+               </element>
+            </optional>
+            <ref name="scheme"/>
+            <ref name="source"/>
+            <ref name="destination"/>
+            <optional>
+               <ref name="default"/>
+            </optional>
+            <optional>
+               <ref name="path"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="scheme">
+      <choice>
+         <ref name="top_down"/>
+         <ref name="sideways"/>
+      </choice>
+   </define>
+   <define name="top_down">
+      <element>
+         <name>top_down</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="sideways">
+      <element>
+         <name>sideways</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="default">
+      <element>
+         <name>default</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>text_style</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>shape_style</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>line_style</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>start_style</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>end_style</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>hmin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>wmin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>margin</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>padding</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>packing</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>debug-whitespace</name>
+                  <data type="boolean"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="coordinate">
+      <choice>
+         <ref name="x"/>
+         <ref name="y"/>
+      </choice>
+   </define>
+   <define name="x">
+      <element>
+         <name>x</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <element>
+               <name>abs</name>
+               <data type="float"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <optional>
+               <element>
+                  <name>local</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>delta</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>relative</name>
+                  <oneOrMore>
+                     <ref name="position"/>
+                  </oneOrMore>
+               </element>
+            </optional>
+            <optional>
+               <ref name="localpos"/>
+            </optional>
+            <optional>
+               <ref name="at_1"/>
+            </optional>
+            <optional>
+               <ref name="place_1"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="y">
+      <element>
+         <name>y</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <element>
+               <name>abs</name>
+               <data type="float"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <optional>
+               <element>
+                  <name>local</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>delta</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>relative</name>
+                  <oneOrMore>
+                     <ref name="position"/>
+                  </oneOrMore>
+               </element>
+            </optional>
+            <optional>
+               <ref name="localpos"/>
+            </optional>
+            <optional>
+               <ref name="at_2"/>
+            </optional>
+            <optional>
+               <ref name="place_2"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="position">
+      <choice>
+         <ref name="offset"/>
+         <ref name="tbd"/>
+      </choice>
+   </define>
+   <define name="offset">
+      <element>
+         <name>offset</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <text/>
+         </interleave>
+      </element>
+   </define>
+   <define name="tbd">
+      <element>
+         <name>tbd</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="localpos">
+      <choice>
+         <ref name="clocal"/>
+         <ref name="rlocal"/>
+      </choice>
+   </define>
+   <define name="clocal">
+      <element>
+         <name>clocal</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <text/>
+         </interleave>
+      </element>
+   </define>
+   <define name="rlocal">
+      <element>
+         <name>rlocal</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <text/>
+         </interleave>
+      </element>
+   </define>
+   <define name="SMART">
+      <choice>
+         <ref name="AT"/>
+         <ref name="PLACE"/>
+      </choice>
+   </define>
+   <define name="AT">
+      <choice>
+         <ref name="at_1"/>
+         <ref name="at_2"/>
+      </choice>
+   </define>
+   <define name="at_1">
+      <element>
+         <name>at</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>offset</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>of</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>src_rise</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>dest_rise</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="aspect"/>
+            </optional>
+            <optional>
+               <ref name="xanchor"/>
+            </optional>
+            <optional>
+               <ref name="relative"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="at_2">
+      <element>
+         <name>at</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>offset</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>of</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>src_rise</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>dest_rise</name>
+                  <data type="positiveInteger"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="aspect"/>
+            </optional>
+            <optional>
+               <ref name="yanchor"/>
+            </optional>
+            <optional>
+               <ref name="relative"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="PLACE">
+      <choice>
+         <ref name="place_1"/>
+         <ref name="place_2"/>
+      </choice>
+   </define>
+   <define name="place_1">
+      <element>
+         <name>place</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>offset</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="aspect"/>
+            </optional>
+            <optional>
+               <ref name="xanchor"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="place_2">
+      <element>
+         <name>place</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>offset</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="aspect"/>
+            </optional>
+            <optional>
+               <ref name="yanchor"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="relative">
+      <choice>
+         <ref name="parent"/>
+         <ref name="predecessor"/>
+      </choice>
+   </define>
+   <define name="parent">
+      <element>
+         <name>parent</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="predecessor">
+      <element>
+         <name>predecessor</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="aspect">
+      <choice>
+         <ref name="edge"/>
+         <ref name="outer"/>
+         <ref name="margin"/>
+      </choice>
+   </define>
+   <define name="edge">
+      <element>
+         <name>edge</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="outer">
+      <element>
+         <name>outer</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="margin">
+      <element>
+         <name>margin</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="anchor">
+      <choice>
+         <ref name="xanchor"/>
+         <ref name="yanchor"/>
+      </choice>
+   </define>
+   <define name="xanchor">
+      <choice>
+         <ref name="left"/>
+         <ref name="right"/>
+         <ref name="centre"/>
+         <ref name="x_3"/>
+      </choice>
+   </define>
+   <define name="left">
+      <element>
+         <name>left</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>effective_ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="right">
+      <element>
+         <name>right</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>effective_ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="centre">
+      <element>
+         <name>centre</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>effective_ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="x_3">
+      <element>
+         <name>x</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>effective_ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>ratio</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="yanchor">
+      <choice>
+         <ref name="top"/>
+         <ref name="bottom"/>
+         <ref name="middle"/>
+         <ref name="y_3"/>
+      </choice>
+   </define>
+   <define name="top">
+      <element>
+         <name>top</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>effective_ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="bottom">
+      <element>
+         <name>bottom</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>effective_ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="middle">
+      <element>
+         <name>middle</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>effective_ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="y_3">
+      <element>
+         <name>y</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>effective_ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>ratio</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="node_2">
+      <choice>
+         <ref name="source"/>
+         <ref name="destination"/>
+      </choice>
+   </define>
+   <define name="source">
+      <element>
+         <name>source</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>id</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>escape</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>linestyle</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>endline_style</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>destRelPos</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>angleToOtherEnd</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>slotNo</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>annotation</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="specific_edge"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="destination">
+      <element>
+         <name>destination</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>id</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>escape</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>linestyle</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>endline_style</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>destRelPos</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>angleToOtherEnd</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>ratio</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>slotNo</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>annotation</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="specific_edge"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="specific_edge">
+      <choice>
+         <ref name="specific_level"/>
+         <ref name="specific_side"/>
+      </choice>
+   </define>
+   <define name="specific_level">
+      <choice>
+         <ref name="top_edge"/>
+         <ref name="bottom_edge"/>
+      </choice>
+   </define>
+   <define name="top_edge">
+      <element>
+         <name>top_edge</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>deltax</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="annotate_leftright"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="bottom_edge">
+      <element>
+         <name>bottom_edge</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>deltax</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="annotate_leftright"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="specific_side">
+      <choice>
+         <ref name="left_side"/>
+         <ref name="right_side"/>
+      </choice>
+   </define>
+   <define name="left_side">
+      <element>
+         <name>left_side</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>deltay</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="annotate_highlow"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="right_side">
+      <element>
+         <name>right_side</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <optional>
+               <element>
+                  <name>deltay</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <ref name="annotate_highlow"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="annotate_leftright">
+      <choice>
+         <ref name="annotate_left"/>
+         <ref name="annotate_right"/>
+      </choice>
+   </define>
+   <define name="annotate_left">
+      <element>
+         <name>annotate_left</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="annotate_right">
+      <element>
+         <name>annotate_right</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="annotate_highlow">
+      <choice>
+         <ref name="annotate_high"/>
+         <ref name="annotate_low"/>
+      </choice>
+   </define>
+   <define name="annotate_high">
+      <element>
+         <name>annotate_high</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="annotate_low">
+      <element>
+         <name>annotate_low</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="shape_style">
+      <element>
+         <name>shape_style</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <element>
+               <name>id</name>
+               <data type="string"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <optional>
+               <element>
+                  <name>fill</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>stroke</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>stroke-width</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>stroke-dasharray</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>fill-opacity</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>fill-rule</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="endline_style">
+      <element>
+         <name>endline_style</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <element>
+               <name>id</name>
+               <data type="string"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <optional>
+               <element>
+                  <name>stroke</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>stroke-width</name>
+                  <data type="float"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>stroke-dasharray</name>
+                  <data type="string"
+                        datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+               </element>
+            </optional>
+            <element>
+               <name>label_long_offset</name>
+               <data type="string"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <element>
+               <name>label_lateral_offset</name>
+               <data type="float"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <element>
+               <name>lateral_extent</name>
+               <data type="float"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <element>
+               <name>long_extent</name>
+               <data type="float"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <element>
+               <name>minarmlen</name>
+               <data type="float"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+         </interleave>
+      </element>
+   </define>
+   <define name="text_style">
+      <element>
+         <name>text_style</name>
+         <interleave>
+            <optional>
+               <oneOrMore>
+                  <element>
+                     <name>include</name>
+                     <element>
+                        <name>filename</name>
+                        <data type="string"
+                              datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                     </element>
+                     <optional>
+                        <element>
+                           <name>type</name>
+                           <data type="string"
+                                 datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+                        </element>
+                     </optional>
+                  </element>
+               </oneOrMore>
+            </optional>
+            <element>
+               <name>id</name>
+               <data type="string"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <element>
+               <name>fill</name>
+               <data type="string"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <element>
+               <name>font-size</name>
+               <data type="positiveInteger"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <element>
+               <name>font-family</name>
+               <data type="string"
+                     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
+            </element>
+            <optional>
+               <element>
+                  <name>text-decoration</name>
+                  <oneOrMore>
+                     <ref name="text_decoration"/>
+                  </oneOrMore>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>font-style</name>
+                  <ref name="font_style"/>
+               </element>
+            </optional>
+            <optional>
+               <element>
+                  <name>font-weight</name>
+                  <ref name="font_weight"/>
+               </element>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+   <define name="text_decoration">
+      <choice>
+         <ref name="underline"/>
+         <ref name="overline"/>
+         <ref name="line-through"/>
+      </choice>
+   </define>
+   <define name="underline">
+      <element>
+         <name>underline</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="overline">
+      <element>
+         <name>overline</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="line-through">
+      <element>
+         <name>line-through</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="font_style">
+      <choice>
+         <ref name="normal_1"/>
+         <ref name="italic"/>
+         <ref name="oblique"/>
+      </choice>
+   </define>
+   <define name="normal_1">
+      <element>
+         <name>normal</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="italic">
+      <element>
+         <name>italic</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="oblique">
+      <element>
+         <name>oblique</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="font_weight">
+      <choice>
+         <ref name="normal_2"/>
+         <ref name="bold"/>
+         <ref name="bolder"/>
+         <ref name="ligher"/>
+      </choice>
+   </define>
+   <define name="normal_2">
+      <element>
+         <name>normal</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="bold">
+      <element>
+         <name>bold</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="bolder">
+      <element>
+         <name>bolder</name>
+         <empty/>
+      </element>
+   </define>
+   <define name="ligher">
+      <element>
+         <name>ligher</name>
+         <empty/>
+      </element>
+   </define>
+</grammar>
